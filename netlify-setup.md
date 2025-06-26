@@ -19,10 +19,12 @@ Netlify now supports Next.js 15 with zero configuration through their Next.js Ru
    - Connect your Git provider (GitHub)
    - Select your portfolio repository
 
-3. **Configure build settings** (auto-detected):
+3. **Configure build settings** (IMPORTANT):
    - **Build command**: `npm run build`
-   - **Publish directory**: (leave empty - Netlify handles this automatically)
+   - **Publish directory**: **LEAVE EMPTY** or delete any existing value
    - **Node version**: 18+ (automatically detected)
+   
+   ⚠️ **Critical**: If there's an existing publish directory set to `out`, you MUST clear it for the Next.js runtime to work properly.
 
 4. **Deploy**:
    - Click "Deploy site"
@@ -91,7 +93,20 @@ Your project already includes optimized configurations:
 
 ## 🔧 Troubleshooting
 
-### If you encounter issues:
+### Critical Fix for "publish directory not found" Error:
+
+**Error**: `Error: Your publish directory was not found at: /opt/build/repo/out`
+
+**Solution**:
+1. Go to your Netlify site dashboard
+2. Click "Site settings" → "Build & deploy"
+3. Under "Build settings", find "Publish directory"
+4. **DELETE the value** (leave it completely empty)
+5. Save settings and redeploy
+
+This error occurs when the UI has `out` set as publish directory, but the Next.js runtime doesn't use that.
+
+### If you encounter other issues:
 
 1. **Check Node version**:
    ```bash
@@ -120,6 +135,9 @@ Your project already includes optimized configurations:
 
 **Issue**: API routes not working
 **Solution**: Netlify automatically converts these - no action needed
+
+**Issue**: Plugin "@netlify/plugin-nextjs" failed
+**Solution**: Clear the publish directory in Netlify UI settings (see critical fix above)
 
 ## 🌐 Domain Setup
 
