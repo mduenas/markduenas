@@ -277,12 +277,13 @@ build_project() {
     log "Building project for $PLATFORM..."
     
     case $PLATFORM in
-        vercel)
+        vercel|netlify)
+            # Modern Next.js runtime - no static export needed
             if [ "$DRY_RUN" = false ]; then
                 npm run build
             fi
             ;;
-        netlify|aws|github)
+        aws|github)
             # These platforms need static export
             log "Creating static export build..."
             if [ "$DRY_RUN" = false ]; then
@@ -362,7 +363,8 @@ deploy_vercel() {
 deploy_netlify() {
     log "Deploying to Netlify..."
     
-    local deploy_cmd="netlify deploy --dir=out"
+    # Netlify with Next.js runtime doesn't need --dir flag
+    local deploy_cmd="netlify deploy"
     
     if [ "$ENVIRONMENT" = "production" ]; then
         deploy_cmd="$deploy_cmd --prod"
