@@ -1,13 +1,13 @@
+# BACKUP SOLUTION: Static Export Configuration for Netlify
+# Use this if the Next.js runtime continues to have issues
+
 [build]
-  command = "npm run build"
-  publish = ""
+  command = "npm run build:static"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--production=false"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
@@ -37,6 +37,10 @@
   to = "/"
   status = 301
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [context.production]
   environment = { NODE_ENV = "production" }
