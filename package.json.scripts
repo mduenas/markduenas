@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "build:static": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true npm run build",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "deploy:vercel": "./deploy.sh --platform vercel --optimize --verify",
+    "deploy:netlify": "./deploy.sh --platform netlify --optimize --verify",
+    "deploy:aws": "./deploy.sh --platform aws --optimize --verify",
+    "deploy:github": "./deploy.sh --platform github --optimize --verify",
+    "deploy:staging": "./deploy.sh --platform vercel --environment staging",
+    "preview": "npm run build && npm run start",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "update-deps": "npx npm-check-updates -u && npm install",
+    "security-audit": "npm audit && npx better-npm-audit audit"
+  }
+}
