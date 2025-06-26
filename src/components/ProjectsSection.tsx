@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { ExternalLink, Github, Smartphone, Tablet, ChevronLeft, ChevronRight, Monitor, Play } from 'lucide-react'
+import { ExternalLink, Github, Smartphone, Tablet, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
 export default function ProjectsSection() {
@@ -333,8 +333,8 @@ export default function ProjectsSection() {
                 </div>
                 <div className="terminal p-3">
                   <div className="green-text font-mono text-xs">
-                    > STATUS: <span className="tech-text">{currentProject.status}</span><br />
-                    > VERSION: <span className="amber-text">{currentProject.version}</span>
+                    {`>`} STATUS: <span className="tech-text">{currentProject.status}</span><br />
+                    {`>`} VERSION: <span className="amber-text">{currentProject.version}</span>
                   </div>
                 </div>
               </div>
@@ -411,8 +411,8 @@ export default function ProjectsSection() {
           <div className="text-center retro-card p-6 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-3 mb-4">
               <div className="green-text font-mono text-xs">
-                > COUNT_APPS.EXE<br />
-                > <span className="tech-text font-bold">{projects.length}</span>
+                {`>`} COUNT_APPS.EXE<br />
+                {`>`} <span className="tech-text font-bold">{projects.length}</span>
               </div>
             </div>
             <h5 className="text-lg font-black text-white font-mono tracking-wider mb-2">
@@ -426,8 +426,8 @@ export default function ProjectsSection() {
           <div className="text-center retro-card p-6 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-3 mb-4">
               <div className="green-text font-mono text-xs">
-                > PLATFORM_COUNT.SYS<br />
-                > <span className="tech-accent font-bold">2</span>
+                {`>`} PLATFORM_COUNT.SYS<br />
+                {`>`} <span className="tech-accent font-bold">2</span>
               </div>
             </div>
             <h5 className="text-lg font-black text-white font-mono tracking-wider mb-2">
@@ -441,8 +441,8 @@ export default function ProjectsSection() {
           <div className="text-center retro-card p-6 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-3 mb-4">
               <div className="green-text font-mono text-xs">
-                > DOWNLOAD_STATS.DB<br />
-                > <span className="green-text font-bold">100K+</span>
+                {`>`} DOWNLOAD_STATS.DB<br />
+                {`>`} <span className="green-text font-bold">100K+</span>
               </div>
             </div>
             <h5 className="text-lg font-black text-white font-mono tracking-wider mb-2">
@@ -456,8 +456,8 @@ export default function ProjectsSection() {
           <div className="text-center retro-card p-6 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-3 mb-4">
               <div className="green-text font-mono text-xs">
-                > RATING_AVG.CFG<br />
-                > <span className="amber-text font-bold">4.8★</span>
+                {`>`} RATING_AVG.CFG<br />
+                {`>`} <span className="amber-text font-bold">4.8★</span>
               </div>
             </div>
             <h5 className="text-lg font-black text-white font-mono tracking-wider mb-2">

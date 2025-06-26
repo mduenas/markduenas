@@ -207,7 +207,7 @@ export default function HeroSection() {
           >
             <div className="terminal max-w-md mx-auto">
               <p className="font-mono text-left">
-                <span className="green-text">C:\PORTFOLIO></span> <span className="animate-pulse">_</span>
+                <span className="green-text">C:\PORTFOLIO{`>`}</span> <span className="animate-pulse">_</span>
               </p>
             </div>
           </motion.div>

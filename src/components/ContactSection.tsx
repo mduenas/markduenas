@@ -201,10 +201,10 @@ export default function ContactSection() {
             >
               <div className="terminal p-4">
                 <div className="green-text font-mono text-sm">
-                  > STATUS_CHECK.EXE<br />
-                  > SCANNING AVAILABILITY...<br />
-                  > <span className="tech-text font-bold">ONLINE</span> - ACCEPTING NEW PROJECTS<br />
-                  > RESPONSE_TIME: <span className="amber-text font-bold">{'< 24 HOURS'}</span>
+                  {`>`} STATUS_CHECK.EXE<br />
+                  {`>`} SCANNING AVAILABILITY...<br />
+                  {`>`} <span className="tech-text font-bold">ONLINE</span> - ACCEPTING NEW PROJECTS<br />
+                  {`>`} RESPONSE_TIME: <span className="amber-text font-bold">{'< 24 HOURS'}</span>
                 </div>
               </div>
             </motion.div>
@@ -225,9 +225,9 @@ export default function ContactSection() {
               >
                 <div className="terminal p-6 mb-6">
                   <div className="green-text font-mono text-sm">
-                    > MESSAGE_SEND.EXE<br />
-                    > TRANSMITTING DATA...<br />
-                    > <span className="tech-text font-bold">SUCCESS</span> - MESSAGE DELIVERED
+                    {`>`} MESSAGE_SEND.EXE<br />
+                    {`>`} TRANSMITTING DATA...<br />
+                    {`>`} <span className="tech-text font-bold">SUCCESS</span> - MESSAGE DELIVERED
                   </div>
                 </div>
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -345,9 +345,9 @@ export default function ContactSection() {
 
                 <div className="terminal p-4 mt-6">
                   <div className="green-text font-mono text-xs">
-                    > FORM_VALIDATION.EXE RUNNING...<br />
-                    > ENCRYPTION: <span className="tech-text">ENABLED</span><br />
-                    > PRIVACY: <span className="tech-accent">PROTECTED</span>
+                    {`>`} FORM_VALIDATION.EXE RUNNING...<br />
+                    {`>`} ENCRYPTION: <span className="tech-text">ENABLED</span><br />
+                    {`>`} PRIVACY: <span className="tech-accent">PROTECTED</span>
                   </div>
                 </div>
               </form>

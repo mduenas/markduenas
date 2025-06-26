@@ -207,9 +207,9 @@ export default function SkillsSection() {
           <div className="text-center retro-card p-8 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-4 mb-4">
               <div className="green-text font-mono text-sm">
-                > EXPERTISE_LEVEL.IOS<br />
-                > LOADING...<br />
-                > <span className="tech-text font-bold">EXPERT</span>
+                {`>`} EXPERTISE_LEVEL.IOS<br />
+                {`>`} LOADING...<br />
+                {`>`} <span className="tech-text font-bold">EXPERT</span>
               </div>
             </div>
             <h4 className="text-xl font-black text-white mb-3 font-mono tracking-wider">
@@ -223,9 +223,9 @@ export default function SkillsSection() {
           <div className="text-center retro-card p-8 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-4 mb-4">
               <div className="green-text font-mono text-sm">
-                > PLATFORM_SUPPORT.DAT<br />
-                > SCANNING...<br />
-                > <span className="tech-accent font-bold">MULTI-PLATFORM</span>
+                {`>`} PLATFORM_SUPPORT.DAT<br />
+                {`>`} SCANNING...<br />
+                {`>`} <span className="tech-accent font-bold">MULTI-PLATFORM</span>
               </div>
             </div>
             <h4 className="text-xl font-black text-white mb-3 font-mono tracking-wider">
@@ -239,9 +239,9 @@ export default function SkillsSection() {
           <div className="text-center retro-card p-8 hover:bg-gray-700/20 transition-all duration-300">
             <div className="terminal p-4 mb-4">
               <div className="green-text font-mono text-sm">
-                > STACK_ANALYSIS.EXE<br />
-                > PROCESSING...<br />
-                > <span className="amber-text font-bold">FULL-STACK</span>
+                {`>`} STACK_ANALYSIS.EXE<br />
+                {`>`} PROCESSING...<br />
+                {`>`} <span className="amber-text font-bold">FULL-STACK</span>
               </div>
             </div>
             <h4 className="text-xl font-black text-white mb-3 font-mono tracking-wider">
