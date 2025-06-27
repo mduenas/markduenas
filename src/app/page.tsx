@@ -1,7 +1,7 @@
 import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
 import SkillsSection from '@/components/SkillsSection'
-import ProjectsSection from '@/components/ProjectsSection'
+import ProjectsListSection from '@/components/ProjectsListSection'
 import ContactSection from '@/components/ContactSection'
 import Link from 'next/link'
 
@@ -12,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <ProjectsSection />
+        <ProjectsListSection />
         <ContactSection />
       </main>
       
