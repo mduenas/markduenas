@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import ConditionalNavigation from "@/components/ConditionalNavigation";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
-        <Navigation />
+        <ConditionalNavigation />
         <main className="relative overflow-hidden">
           {children}
         </main>

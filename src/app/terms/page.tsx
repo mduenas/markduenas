@@ -60,10 +60,7 @@ export default function TermsPage() {
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 retro-card border-b-2 border-gray-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
-              <Link href="/" className="text-3xl font-black hover:text-blue-400 transition-colors">
-                <span className="tech-text font-mono">[MD]</span>
-              </Link>
+            <div className="flex justify-end items-center h-20">
               <Link 
                 href="/"
                 className="retro-card px-6 py-3 bg-black hover:bg-gray-700 transition-colors font-mono text-sm tracking-wider text-gray-300 hover:text-blue-400"
