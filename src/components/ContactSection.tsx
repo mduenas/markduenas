@@ -31,11 +31,17 @@ export default function ContactSection() {
     const form = e.target as HTMLFormElement
     const formData = new FormData(form)
     
+    // Convert FormData to URLSearchParams properly
+    const params = new URLSearchParams()
+    for (const [key, value] of formData.entries()) {
+      params.append(key, value.toString())
+    }
+    
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as Record<string, string>).toString()
+        body: params.toString()
       })
       
       if (response.ok) {
