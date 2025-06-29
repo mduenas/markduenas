@@ -5,6 +5,12 @@
   command = "npm run build:static"
   publish = "out"
 
+# Disable Next.js plugin since we're using static export
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disabled = true
+
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--production=false"
