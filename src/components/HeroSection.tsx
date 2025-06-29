@@ -178,8 +178,8 @@ export default function HeroSection() {
             className="flex justify-center space-x-8 pt-8"
           >
             {[
-              { icon: Github, href: 'https://github.com/markduenas', label: 'GITHUB' },
-              { icon: Linkedin, href: 'https://linkedin.com/in/markduenas', label: 'LINKEDIN' },
+              { icon: Github, href: 'https://github.com/mduenas', label: 'GITHUB' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/mduenas/', label: 'LINKEDIN' },
               { icon: Mail, href: 'mailto:mark@duenasgames.com', label: 'EMAIL' },
               { icon: Download, href: '#', label: 'RESUME' }
             ].map((social, index) => (

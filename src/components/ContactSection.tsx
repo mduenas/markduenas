@@ -64,13 +64,13 @@ export default function ContactSection() {
     {
       icon: Github,
       label: 'GITHUB.EXE',
-      href: 'https://github.com/markduenas',
+      href: 'https://github.com/mduenas',
       description: 'Code Repository'
     },
     {
       icon: Linkedin,
       label: 'LINKEDIN.NET',
-      href: 'https://linkedin.com/in/markduenas',
+      href: 'https://www.linkedin.com/in/mduenas/',
       description: 'Professional Network'
     }
   ]
