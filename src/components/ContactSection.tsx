@@ -28,33 +28,49 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
     
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: '', email: '', subject: '', message: '' })
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Form submission failed - you might want to show an error message
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
     {
       icon: Mail,
       label: 'EMAIL.CFG',
-      value: 'mark@duenasgames.com',
-      href: 'mailto:mark@duenasgames.com',
+      value: 'markduenas@gmail.com',
+      href: 'mailto:markduenas@gmail.com',
       description: 'Primary Communication Channel'
     },
     {
       icon: Phone,
       label: 'PHONE.SYS',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '208.412.5834',
+      href: 'tel:+12084125834',
       description: 'Voice Communication Protocol'
     },
     {
       icon: MapPin,
       label: 'LOCATION.DAT',
-      value: 'San Francisco, CA',
+      value: 'Emmett, Idaho',
       href: '#',
       description: 'Geographic Coordinates'
     }
@@ -245,7 +261,22 @@ export default function ContactSection() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                
+                {/* Hidden form for Netlify detection */}
+                <div hidden>
+                  <input name="name" />
+                  <input name="email" />
+                  <input name="subject" />
+                  <textarea name="message"></textarea>
+                </div>
                 <div className="border-b-2 border-gray-600 pb-4 mb-6">
                   <h3 className="text-2xl font-black text-white font-mono tracking-wider flex items-center gap-3">
                     <div className="w-4 h-4 bg-green-400 rotate-45"></div>

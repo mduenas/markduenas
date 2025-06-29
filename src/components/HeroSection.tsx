@@ -180,7 +180,7 @@ export default function HeroSection() {
             {[
               { icon: Github, href: 'https://github.com/mduenas', label: 'GITHUB' },
               { icon: Linkedin, href: 'https://www.linkedin.com/in/mduenas/', label: 'LINKEDIN' },
-              { icon: Mail, href: 'mailto:mark@duenasgames.com', label: 'EMAIL' },
+              { icon: Mail, href: 'mailto:markduenas@gmail.com', label: 'EMAIL' },
               { icon: Download, href: '#', label: 'RESUME' }
             ].map((social, index) => (
               <motion.a

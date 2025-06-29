@@ -131,9 +131,9 @@ export const projects: Project[] = [
   {
     id: 'haba',
     title: 'HABA_TRACKER.SYS',
-    category: 'Productivity & Lifestyle',
-    description: 'Personal habit tracking and productivity application. Clean, minimalist design focused on helping users build and maintain positive habits.',
-    longDescription: 'Elegant habit tracking application designed to help users build lasting positive habits. Features clean design, progress visualization, reminder system, and detailed analytics.',
+    category: 'Health & Medical',
+    description: 'Hearing Aid Battery replacement tracking app. Clean, minimalist design focused on helping users track battery changes and receive replacement reminders.',
+    longDescription: 'Specialized tracking application for hearing aid users to monitor battery replacements. Features battery life tracking, replacement reminders, usage analytics, and maintenance scheduling.',
     technologies: ['SWIFT', 'CORE_DATA', 'USERNOTIFICATIONS', 'WIDGETKIT'],
     platforms: ['iOS'],
     appStoreUrl: '#',
@@ -141,10 +141,10 @@ export const projects: Project[] = [
     status: 'BETA',
     version: 'v0.9.1',
     features: [
-      'HABIT CREATION AND TRACKING',
-      'PROGRESS VISUALIZATION',
-      'SMART NOTIFICATIONS',
-      'STREAK TRACKING',
+      'BATTERY REPLACEMENT TRACKING',
+      'USAGE ANALYTICS AND CHARTS',
+      'REPLACEMENT REMINDERS',
+      'BATTERY LIFE MONITORING',
       'WIDGET SUPPORT',
       'DATA EXPORT AND BACKUP'
     ],

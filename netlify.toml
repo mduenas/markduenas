@@ -50,3 +50,7 @@
 
 [context.branch-deploy]
   environment = { NODE_ENV = "development" }
+
+# Form handling configuration
+[[forms]]
+  name = "contact"
