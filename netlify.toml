@@ -5,11 +5,7 @@
   command = "npm run build:static"
   publish = "out"
 
-# Disable Next.js plugin since we're using static export
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    disabled = true
+# Force static site deployment - disable auto-detection
 
 [build.environment]
   NODE_VERSION = "18"
