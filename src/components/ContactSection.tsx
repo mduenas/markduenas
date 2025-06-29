@@ -28,14 +28,13 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-    
-    // Convert FormData to URLSearchParams properly
+    // Create clean form data from state
     const params = new URLSearchParams()
-    for (const [key, value] of formData.entries()) {
-      params.append(key, value.toString())
-    }
+    params.append('form-name', 'contact')
+    params.append('name', formData.name)
+    params.append('email', formData.email)
+    params.append('subject', formData.subject)
+    params.append('message', formData.message)
     
     try {
       const response = await fetch('/', {
