@@ -156,6 +156,36 @@ export const projects: Project[] = [
       '/images/projects/haba/main.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'recipeez',
+    title: 'RECIPEEZ.APP',
+    category: 'Food & Cooking',
+    description: 'Modern recipe management app built with Kotlin Multiplatform. Create, organize, and share your favorite recipes with beautiful photo galleries and intuitive design.',
+    longDescription: 'A comprehensive recipe management application featuring cross-platform compatibility, anonymous authentication for privacy, photo upload with Firebase storage, and a beautiful Material3 design. Built with Kotlin Multiplatform for Android and iOS.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'FIREBASE', 'MATERIAL3', 'COIL'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: '#',
+    githubUrl: 'https://github.com/markduenas/recipes',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0-beta',
+    features: [
+      'CROSS-PLATFORM RECIPE MANAGEMENT',
+      'ANONYMOUS AUTHENTICATION',
+      'PHOTO UPLOAD AND GALLERIES',
+      'FIREBASE CLOUD STORAGE',
+      'MATERIAL3 DESIGN SYSTEM',
+      'OFFLINE-FIRST DATA CACHING',
+      'SEARCH AND FILTER RECIPES',
+      'COMMUNITY RECIPE SHARING'
+    ],
+    images: [
+      '/images/projects/recipeez/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/recipeez/icon.png'
+    ],
+    tabletImages: []
   }
 ];
 
