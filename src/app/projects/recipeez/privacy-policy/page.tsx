@@ -153,7 +153,7 @@ export default function RecipeezPrivacyPolicyPage() {
               The data export feature is currently in development. When available, you'll be able to export all your recipes, photos, and metadata in multiple formats (JSON, PDF).
             </p>
             <p className="text-gray-600 text-sm">
-              Until then, you can request a manual export by contacting privacy@recipeez.com
+              Until then, you can request a manual export by contacting privacy@recipeez.app
             </p>
           </motion.div>
 
@@ -172,11 +172,11 @@ export default function RecipeezPrivacyPolicyPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Privacy Questions:</h3>
-                <p className="text-orange-600 font-medium">privacy@recipeez.com</p>
+                <p className="text-orange-600 font-medium">privacy@recipeez.app</p>
               </div>
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">General Support:</h3>
-                <p className="text-orange-600 font-medium">support@recipeez.com</p>
+                <p className="text-orange-600 font-medium">support@recipeez.app</p>
               </div>
             </div>
           </motion.div>
