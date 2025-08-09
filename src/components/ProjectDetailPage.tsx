@@ -334,21 +334,57 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             </div>
 
             {/* Action Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <a
-                href={project.appStoreUrl}
-                className={`${isRecipeez ? 'bg-orange-500 hover:bg-orange-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : isRockSkipper ? 'bg-blue-500 hover:bg-blue-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
-              >
-                <ExternalLink className="w-5 h-5" />
-                <span>{isRecipeez ? 'Download from App Store' : isRockSkipper ? 'Coming to App Store' : 'VIEW ON APP STORE'}</span>
-              </a>
-              <a
-                href={project.githubUrl}
-                className={`${isRecipeez ? 'bg-gray-700 hover:bg-gray-800 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : isRockSkipper ? 'bg-slate-600 hover:bg-slate-700 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn-secondary'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
-              >
-                <Github className="w-5 h-5" />
-                <span>{isRecipeez ? 'View Source Code' : isRockSkipper ? 'View Source Code' : 'SOURCE CODE'}</span>
-              </a>
+            <div className={`${isRecipeez ? 'space-y-4' : 'grid grid-cols-1 md:grid-cols-2 gap-4'}`}>
+              {!isRecipeez && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a
+                    href={project.appStoreUrl}
+                    className={`${isRockSkipper ? 'bg-blue-500 hover:bg-blue-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    <span>{isRockSkipper ? 'Coming to App Store' : 'VIEW ON APP STORE'}</span>
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    className={`${isRockSkipper ? 'bg-slate-600 hover:bg-slate-700 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn-secondary'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
+                  >
+                    <Github className="w-5 h-5" />
+                    <span>{isRockSkipper ? 'View Source Code' : 'SOURCE CODE'}</span>
+                  </a>
+                </div>
+              )}
+              
+              {isRecipeez && (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a
+                      href={project.appStoreUrl}
+                      className="bg-orange-500 hover:bg-orange-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      <span>Download from App Store</span>
+                    </a>
+                    <a
+                      href={project.githubUrl}
+                      className="bg-gray-700 hover:bg-gray-800 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200"
+                    >
+                      <Github className="w-5 h-5" />
+                      <span>View Source Code</span>
+                    </a>
+                  </div>
+                  
+                  {/* Privacy Policy Link for Recipeez */}
+                  <div className="flex justify-center">
+                    <Link
+                      href="/projects/recipeez/privacy-policy"
+                      className="bg-white/90 backdrop-blur-sm border-2 border-orange-200 text-orange-700 hover:bg-orange-50 hover:border-orange-300 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 text-sm flex items-center justify-center gap-2 py-2 px-4 transition-all duration-200"
+                    >
+                      <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
+                      <span>Privacy Policy</span>
+                    </Link>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>
