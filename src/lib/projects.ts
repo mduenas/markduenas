@@ -186,6 +186,36 @@ export const projects: Project[] = [
       '/images/projects/recipeez/icon.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'rockskipper',
+    title: 'ROCKSKIPPER.APP',
+    category: 'Sports & Recreation',
+    description: 'AI-powered rock skipping counter that uses advanced audio detection to count skips in real-time. Features achievement system, personal records, and detailed analytics.',
+    longDescription: 'An innovative Kotlin Multiplatform application that revolutionizes rock skipping by using sophisticated audio pattern recognition to detect and count skips automatically. The app analyzes sound patterns in real-time to identify the distinctive acoustic signature of rocks hitting water, complete with gamification elements and detailed performance tracking.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'AUDIO_PROCESSING', 'MACHINE_LEARNING', 'FFT_ANALYSIS'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: '#',
+    githubUrl: 'https://github.com/markduenas/rockskipper',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0-alpha',
+    features: [
+      'REAL-TIME AUDIO SKIP DETECTION',
+      'PERSONAL RECORDS TRACKING',
+      'ACHIEVEMENT SYSTEM WITH 8 BADGES',
+      'SESSION HISTORY AND ANALYTICS',
+      'SPECTRAL AUDIO VISUALIZATION',
+      'CROSS-PLATFORM KOTLIN MULTIPLATFORM',
+      'ADAPTIVE SENSITIVITY CONTROLS',
+      'ENVIRONMENTAL NOISE FILTERING'
+    ],
+    images: [
+      '/images/projects/rockskipper/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/rockskipper/icon.png'
+    ],
+    tabletImages: []
   }
 ];
 

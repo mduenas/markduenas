@@ -16,8 +16,9 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [currentView, setCurrentView] = useState<'mobile' | 'tablet' | 'desktop'>('mobile')
   
-  // Special styling for Recipeez to match the mobile app theme
+  // Special styling for different apps to match their themes
   const isRecipeez = projectId === 'recipeez'
+  const isRockSkipper = projectId === 'rockskipper'
 
   if (!project) {
     return (
@@ -61,10 +62,12 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
   }
 
   return (
-    <div className={`min-h-screen py-32 relative overflow-hidden ${isRecipeez ? '' : 'scanlines'}`}>
-      {/* Background - different for Recipeez */}
+    <div className={`min-h-screen py-32 relative overflow-hidden ${isRecipeez || isRockSkipper ? '' : 'scanlines'}`}>
+      {/* Background - different for each app */}
       {isRecipeez ? (
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100"></div>
+      ) : isRockSkipper ? (
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50"></div>
       ) : (
         <div className="absolute inset-0 retro-grid opacity-10"></div>
       )}
@@ -93,25 +96,25 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className={`text-4xl md:text-6xl font-black mb-6 tracking-wider ${isRecipeez ? 'text-orange-600' : ''}`}>
-            <span className={isRecipeez ? '' : 'tech-text'}>{project.title}</span>
+          <h1 className={`text-4xl md:text-6xl font-black mb-6 tracking-wider ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-700' : ''}`}>
+            <span className={isRecipeez || isRockSkipper ? '' : 'tech-text'}>{project.title}</span>
           </h1>
-          <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : 'retro-card'} p-6 max-w-4xl mx-auto`}>
+          <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border-2 border-blue-200 rounded-2xl shadow-xl' : 'retro-card'} p-6 max-w-4xl mx-auto`}>
             <div className="flex items-center justify-center gap-4 mb-4">
-              <span className={`${isRecipeez ? 'bg-orange-100 border border-orange-300 text-orange-700 rounded-full' : 'retro-card bg-black'} px-4 py-2 text-lg font-mono tracking-wider ${
-                !isRecipeez && project.status === 'PRODUCTION' ? 'tech-text' :
-                !isRecipeez && project.status === 'BETA' ? 'amber-text' : !isRecipeez ? 'text-gray-400' : ''
+              <span className={`${isRecipeez ? 'bg-orange-100 border border-orange-300 text-orange-700 rounded-full' : isRockSkipper ? 'bg-blue-100 border border-blue-300 text-blue-700 rounded-full' : 'retro-card bg-black'} px-4 py-2 text-lg font-mono tracking-wider ${
+                !isRecipeez && !isRockSkipper && project.status === 'PRODUCTION' ? 'tech-text' :
+                !isRecipeez && !isRockSkipper && project.status === 'BETA' ? 'amber-text' : !isRecipeez && !isRockSkipper ? 'text-gray-400' : ''
               }`}>
                 {project.status}
               </span>
-              <span className={`${isRecipeez ? 'bg-amber-100 border border-amber-300 text-amber-700 rounded-full' : 'retro-card tech-accent bg-black'} px-4 py-2 text-lg font-mono tracking-wider`}>
+              <span className={`${isRecipeez ? 'bg-amber-100 border border-amber-300 text-amber-700 rounded-full' : isRockSkipper ? 'bg-cyan-100 border border-cyan-300 text-cyan-700 rounded-full' : 'retro-card tech-accent bg-black'} px-4 py-2 text-lg font-mono tracking-wider`}>
                 {project.category}
               </span>
-              <span className={`${isRecipeez ? 'bg-green-100 border border-green-300 text-green-700 rounded-full' : 'retro-card green-text bg-black'} px-4 py-2 text-lg font-mono tracking-wider`}>
+              <span className={`${isRecipeez ? 'bg-green-100 border border-green-300 text-green-700 rounded-full' : isRockSkipper ? 'bg-slate-100 border border-slate-300 text-slate-700 rounded-full' : 'retro-card green-text bg-black'} px-4 py-2 text-lg font-mono tracking-wider`}>
                 {project.version}
               </span>
             </div>
-            <p className={`text-xl ${isRecipeez ? 'text-gray-700' : 'text-white'} ${isRecipeez ? '' : 'font-mono'} leading-relaxed`}>
+            <p className={`text-xl ${isRecipeez || isRockSkipper ? 'text-gray-700' : 'text-white'} ${isRecipeez || isRockSkipper ? '' : 'font-mono'} leading-relaxed`}>
               {project.longDescription}
             </p>
           </div>
@@ -236,18 +239,18 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             {/* Platform Support */}
             <div className="flex justify-center space-x-4">
               {project.platforms.includes('iOS') && (
-                <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border border-orange-200 rounded-xl shadow-lg' : 'retro-card bg-black'} p-4 flex items-center space-x-2`}>
-                  <Smartphone className={`w-5 h-5 ${isRecipeez ? 'text-orange-500' : 'tech-text'}`} />
-                  <span className={`text-sm ${isRecipeez ? 'text-gray-700' : 'font-mono text-gray-300 tracking-wider'}`}>
-                    {isRecipeez ? 'iOS Support' : 'iOS_SUPPORT'}
+                <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border border-orange-200 rounded-xl shadow-lg' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border border-blue-200 rounded-xl shadow-lg' : 'retro-card bg-black'} p-4 flex items-center space-x-2`}>
+                  <Smartphone className={`w-5 h-5 ${isRecipeez ? 'text-orange-500' : isRockSkipper ? 'text-blue-500' : 'tech-text'}`} />
+                  <span className={`text-sm ${isRecipeez || isRockSkipper ? 'text-gray-700' : 'font-mono text-gray-300 tracking-wider'}`}>
+                    {isRecipeez || isRockSkipper ? 'iOS Support' : 'iOS_SUPPORT'}
                   </span>
                 </div>
               )}
               {project.platforms.includes('Android') && (
-                <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border border-green-200 rounded-xl shadow-lg' : 'retro-card bg-black'} p-4 flex items-center space-x-2`}>
-                  <Smartphone className={`w-5 h-5 ${isRecipeez ? 'text-green-500' : 'tech-text'}`} />
-                  <span className={`text-sm ${isRecipeez ? 'text-gray-700' : 'font-mono text-gray-300 tracking-wider'}`}>
-                    {isRecipeez ? 'Android Support' : 'ANDROID_SUPPORT'}
+                <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border border-green-200 rounded-xl shadow-lg' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border border-green-200 rounded-xl shadow-lg' : 'retro-card bg-black'} p-4 flex items-center space-x-2`}>
+                  <Smartphone className={`w-5 h-5 ${isRecipeez || isRockSkipper ? 'text-green-500' : 'tech-text'}`} />
+                  <span className={`text-sm ${isRecipeez || isRockSkipper ? 'text-gray-700' : 'font-mono text-gray-300 tracking-wider'}`}>
+                    {isRecipeez || isRockSkipper ? 'Android Support' : 'ANDROID_SUPPORT'}
                   </span>
                 </div>
               )}
@@ -270,27 +273,27 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             className="space-y-8"
           >
             {/* Description */}
-            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
-              <h3 className={`text-2xl font-black ${isRecipeez ? 'text-orange-600' : 'text-white'} ${isRecipeez ? '' : 'font-mono tracking-wider'} mb-4 flex items-center gap-3`}>
-                <div className={`w-4 h-4 ${isRecipeez ? 'bg-orange-400 rounded-full' : 'bg-blue-400 rotate-45'}`}></div>
-                {isRecipeez ? 'About This App' : 'PROJECT_OVERVIEW.TXT'}
+            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border-2 border-blue-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
+              <h3 className={`text-2xl font-black ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-700' : 'text-white'} ${isRecipeez || isRockSkipper ? '' : 'font-mono tracking-wider'} mb-4 flex items-center gap-3`}>
+                <div className={`w-4 h-4 ${isRecipeez ? 'bg-orange-400 rounded-full' : isRockSkipper ? 'bg-blue-400 rounded-full' : 'bg-blue-400 rotate-45'}`}></div>
+                {isRecipeez ? 'About This App' : isRockSkipper ? 'About RockSkipper' : 'PROJECT_OVERVIEW.TXT'}
               </h3>
-              <p className={`text-lg ${isRecipeez ? 'text-gray-700' : 'text-gray-300'} ${isRecipeez ? '' : 'font-mono'} leading-relaxed`}>
+              <p className={`text-lg ${isRecipeez || isRockSkipper ? 'text-gray-700' : 'text-gray-300'} ${isRecipeez || isRockSkipper ? '' : 'font-mono'} leading-relaxed`}>
                 {project.description}
               </p>
             </div>
 
             {/* Technologies */}
-            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
-              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : 'text-white'} mb-4 ${isRecipeez ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
-                <div className={`w-4 h-4 ${isRecipeez ? 'bg-teal-400 rounded-full' : 'bg-teal-400 rotate-45'}`}></div>
-                {isRecipeez ? 'Built With' : 'TECH_STACK.CFG'}
+            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border-2 border-blue-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
+              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-700' : 'text-white'} mb-4 ${isRecipeez || isRockSkipper ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
+                <div className={`w-4 h-4 ${isRecipeez ? 'bg-teal-400 rounded-full' : isRockSkipper ? 'bg-teal-400 rounded-full' : 'bg-teal-400 rotate-45'}`}></div>
+                {isRecipeez ? 'Built With' : isRockSkipper ? 'Technologies' : 'TECH_STACK.CFG'}
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className={`${isRecipeez ? 'bg-orange-50 border border-orange-200 text-orange-700 rounded-lg hover:bg-orange-100' : 'retro-card px-3 py-2 bg-black text-gray-300 hover:text-blue-400'} px-3 py-2 text-sm ${isRecipeez ? '' : 'font-mono tracking-wider'} transition-colors text-center`}
+                    className={`${isRecipeez ? 'bg-orange-50 border border-orange-200 text-orange-700 rounded-lg hover:bg-orange-100' : isRockSkipper ? 'bg-blue-50 border border-blue-200 text-blue-700 rounded-lg hover:bg-blue-100' : 'retro-card px-3 py-2 bg-black text-gray-300 hover:text-blue-400'} px-3 py-2 text-sm ${isRecipeez || isRockSkipper ? '' : 'font-mono tracking-wider'} transition-colors text-center`}
                   >
                     {tech.replace(/_/g, ' ')}
                   </span>
@@ -299,15 +302,15 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             </div>
 
             {/* Features */}
-            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
-              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : 'text-white'} mb-4 ${isRecipeez ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
-                <div className={`w-4 h-4 ${isRecipeez ? 'bg-green-400 rounded-full' : 'bg-green-400 rotate-45'}`}></div>
-                {isRecipeez ? 'Key Features' : 'FEATURES.LOG'}
+            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border-2 border-blue-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
+              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-700' : 'text-white'} mb-4 ${isRecipeez || isRockSkipper ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
+                <div className={`w-4 h-4 ${isRecipeez ? 'bg-green-400 rounded-full' : isRockSkipper ? 'bg-green-400 rounded-full' : 'bg-green-400 rotate-45'}`}></div>
+                {isRecipeez ? 'Key Features' : isRockSkipper ? 'Core Features' : 'FEATURES.LOG'}
               </h4>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
-                  <li key={index} className={`flex items-start ${isRecipeez ? 'text-gray-700' : 'text-gray-300'} ${isRecipeez ? '' : 'font-mono'} text-sm`}>
-                    <div className={`w-2 h-2 bg-green-400 ${isRecipeez ? 'rounded-full' : 'rotate-45'} mr-3 mt-2 flex-shrink-0`}></div>
+                  <li key={index} className={`flex items-start ${isRecipeez || isRockSkipper ? 'text-gray-700' : 'text-gray-300'} ${isRecipeez || isRockSkipper ? '' : 'font-mono'} text-sm`}>
+                    <div className={`w-2 h-2 bg-green-400 ${isRecipeez || isRockSkipper ? 'rounded-full' : 'rotate-45'} mr-3 mt-2 flex-shrink-0`}></div>
                     <span>{feature.replace(/_/g, ' ')}</span>
                   </li>
                 ))}
@@ -315,17 +318,17 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             </div>
 
             {/* Project Status */}
-            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
-              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : 'text-white'} mb-4 ${isRecipeez ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
-                <div className={`w-4 h-4 ${isRecipeez ? 'bg-orange-400 rounded-full' : 'bg-orange-400 rotate-45'}`}></div>
-                {isRecipeez ? 'Project Info' : 'PROJECT_STATUS.SYS'}
+            <div className={`${isRecipeez ? 'bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl shadow-xl' : isRockSkipper ? 'bg-white/90 backdrop-blur-sm border-2 border-blue-200 rounded-2xl shadow-xl' : 'retro-card'} p-6`}>
+              <h4 className={`text-xl font-black ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-700' : 'text-white'} mb-4 ${isRecipeez || isRockSkipper ? '' : 'font-mono tracking-wider'} flex items-center gap-3`}>
+                <div className={`w-4 h-4 ${isRecipeez ? 'bg-orange-400 rounded-full' : isRockSkipper ? 'bg-orange-400 rounded-full' : 'bg-orange-400 rotate-45'}`}></div>
+                {isRecipeez ? 'Project Info' : isRockSkipper ? 'Status & Info' : 'PROJECT_STATUS.SYS'}
               </h4>
-              <div className={`${isRecipeez ? 'bg-orange-50 border border-orange-200 rounded-lg' : 'terminal'} p-4`}>
-                <div className={`${isRecipeez ? 'text-gray-700' : 'green-text'} ${isRecipeez ? '' : 'font-mono'} text-sm`}>
-                  {isRecipeez ? '•' : '>'} STATUS: <span className={`font-bold ${isRecipeez ? 'text-orange-600' : 'tech-text'}`}>{project.status}</span><br />
-                  {isRecipeez ? '•' : '>'} VERSION: <span className={`font-bold ${isRecipeez ? 'text-amber-600' : 'amber-text'}`}>{project.version}</span><br />
-                  {isRecipeez ? '•' : '>'} PLATFORM: <span className={`font-bold ${isRecipeez ? 'text-teal-600' : 'tech-accent'}`}>{project.platforms.join(', ')}</span><br />
-                  {isRecipeez ? '•' : '>'} CATEGORY: <span className={`font-bold ${isRecipeez ? 'text-green-600' : 'green-text'}`}>{project.category}</span>
+              <div className={`${isRecipeez ? 'bg-orange-50 border border-orange-200 rounded-lg' : isRockSkipper ? 'bg-blue-50 border border-blue-200 rounded-lg' : 'terminal'} p-4`}>
+                <div className={`${isRecipeez || isRockSkipper ? 'text-gray-700' : 'green-text'} ${isRecipeez || isRockSkipper ? '' : 'font-mono'} text-sm`}>
+                  {isRecipeez || isRockSkipper ? '•' : '>'} STATUS: <span className={`font-bold ${isRecipeez ? 'text-orange-600' : isRockSkipper ? 'text-blue-600' : 'tech-text'}`}>{project.status}</span><br />
+                  {isRecipeez || isRockSkipper ? '•' : '>'} VERSION: <span className={`font-bold ${isRecipeez ? 'text-amber-600' : isRockSkipper ? 'text-slate-600' : 'amber-text'}`}>{project.version}</span><br />
+                  {isRecipeez || isRockSkipper ? '•' : '>'} PLATFORM: <span className={`font-bold ${isRecipeez ? 'text-teal-600' : isRockSkipper ? 'text-cyan-600' : 'tech-accent'}`}>{project.platforms.join(', ')}</span><br />
+                  {isRecipeez || isRockSkipper ? '•' : '>'} CATEGORY: <span className={`font-bold ${isRecipeez ? 'text-green-600' : isRockSkipper ? 'text-teal-600' : 'green-text'}`}>{project.category}</span>
                 </div>
               </div>
             </div>
@@ -334,17 +337,17 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a
                 href={project.appStoreUrl}
-                className={`${isRecipeez ? 'bg-orange-500 hover:bg-orange-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
+                className={`${isRecipeez ? 'bg-orange-500 hover:bg-orange-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : isRockSkipper ? 'bg-blue-500 hover:bg-blue-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
               >
                 <ExternalLink className="w-5 h-5" />
-                <span>{isRecipeez ? 'Download from App Store' : 'VIEW ON APP STORE'}</span>
+                <span>{isRecipeez ? 'Download from App Store' : isRockSkipper ? 'Coming to App Store' : 'VIEW ON APP STORE'}</span>
               </a>
               <a
                 href={project.githubUrl}
-                className={`${isRecipeez ? 'bg-gray-700 hover:bg-gray-800 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn-secondary'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
+                className={`${isRecipeez ? 'bg-gray-700 hover:bg-gray-800 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : isRockSkipper ? 'bg-slate-600 hover:bg-slate-700 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105' : 'retro-btn-secondary'} text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200`}
               >
                 <Github className="w-5 h-5" />
-                <span>{isRecipeez ? 'View Source Code' : 'SOURCE CODE'}</span>
+                <span>{isRecipeez ? 'View Source Code' : isRockSkipper ? 'View Source Code' : 'SOURCE CODE'}</span>
               </a>
             </div>
           </motion.div>
