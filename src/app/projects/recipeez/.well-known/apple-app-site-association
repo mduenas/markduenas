@@ -1,0 +1,29 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "A8AAE5A4T6.com.markduenas.recipes",
+        "paths": [
+          "/shared/*",
+          "/recipe/*",
+          "/"
+        ]
+      },
+      {
+        "appID": "A8AAE5A4T6.com.markduenas.recipesapp",
+        "paths": [
+          "/shared/*",
+          "/recipe/*",
+          "/"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "A8AAE5A4T6.com.markduenas.recipes",
+      "A8AAE5A4T6.com.markduenas.recipesapp"
+    ]
+  }
+}
