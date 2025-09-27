@@ -90,7 +90,7 @@ export default function HeroSection() {
             className="space-y-6"
           >
             <h1 className="text-6xl md:text-8xl font-black tracking-wider glitch" data-text={glitchText}>
-              <span style={{ color: '#800000' }}>{glitchText}</span>
+              <span className="text-teal-400">{glitchText}</span>
             </h1>
             
             <div className="relative">
