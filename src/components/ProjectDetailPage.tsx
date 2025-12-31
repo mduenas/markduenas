@@ -365,14 +365,16 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
                       <span>Download from App Store</span>
                     </a>
                     <a
-                      href={project.githubUrl}
-                      className="bg-gray-700 hover:bg-gray-800 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200"
+                      href="https://recipeez.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gradient-to-r from-orange-400 to-amber-500 hover:from-orange-500 hover:to-amber-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 text-lg flex items-center justify-center gap-3 py-3 px-6 transition-all duration-200"
                     >
-                      <Github className="w-5 h-5" />
-                      <span>View Source Code</span>
+                      <ExternalLink className="w-5 h-5" />
+                      <span>Visit recipeez.app</span>
                     </a>
                   </div>
-                  
+
                   {/* Privacy Policy Link for Recipeez */}
                   <div className="flex justify-center">
                     <Link
