@@ -161,23 +161,23 @@ export const projects: Project[] = [
     id: 'recipeez',
     title: 'RECIPEEZ.APP',
     category: 'Food & Cooking',
-    description: 'Modern recipe management app built with Kotlin Multiplatform. Create, organize, and share your favorite recipes with beautiful photo galleries and intuitive design.',
-    longDescription: 'A comprehensive recipe management application featuring cross-platform compatibility, anonymous authentication for privacy, photo upload with Firebase storage, and a beautiful Material3 design. Built with Kotlin Multiplatform for Android and iOS.',
-    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'FIREBASE', 'MATERIAL3', 'COIL'],
+    description: 'Privacy-first recipe management app for iOS and Android. Create, organize, and import recipes with AI-powered URL extraction. Your recipes are yours.',
+    longDescription: 'A modern, privacy-first recipe management application featuring anonymous authentication, AI-powered recipe import from URLs, cross-device sync, meal planning, and automatic shopping lists. Built with Kotlin Multiplatform and Compose for a beautiful Material3 experience on both platforms.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'FIREBASE', 'OPENAI', 'MATERIAL3', 'KTOR'],
     platforms: ['Android', 'iOS'],
-    appStoreUrl: '#',
-    githubUrl: 'https://github.com/markduenas/recipes',
-    status: 'DEVELOPMENT',
-    version: 'v1.0.0-beta',
+    appStoreUrl: 'https://apps.apple.com/us/app/recipeez/id6748916547',
+    githubUrl: '#',
+    status: 'PRODUCTION',
+    version: 'v1.0.68',
     features: [
-      'CROSS-PLATFORM RECIPE MANAGEMENT',
-      'ANONYMOUS AUTHENTICATION',
-      'PHOTO UPLOAD AND GALLERIES',
-      'FIREBASE CLOUD STORAGE',
-      'MATERIAL3 DESIGN SYSTEM',
+      'PRIVACY-FIRST ANONYMOUS AUTH',
+      'AI-POWERED RECIPE IMPORT FROM URLs',
+      'CROSS-DEVICE CLOUD SYNC',
+      'MEAL PLANNING CALENDAR',
+      'AUTOMATIC SHOPPING LISTS',
+      'PHOTO GALLERIES WITH CLOUD STORAGE',
       'OFFLINE-FIRST DATA CACHING',
-      'SEARCH AND FILTER RECIPES',
-      'COMMUNITY RECIPE SHARING'
+      'ADVANCED SEARCH AND FILTERING'
     ],
     images: [
       '/images/projects/recipeez/icon.png'
@@ -214,6 +214,36 @@ export const projects: Project[] = [
     ],
     mobileImages: [
       '/images/projects/rockskipper/icon.png'
+    ],
+    tabletImages: []
+  },
+  {
+    id: 'practiceflow',
+    title: 'PRACTICEFLOW.APP',
+    category: 'Music & Education',
+    description: 'Music practice tracking app for rock/pop musicians. Track sessions, manage songs, build streaks, and achieve your practice goals with gamification.',
+    longDescription: 'A comprehensive music practice companion built with Kotlin Multiplatform for Android and iOS. Features practice session tracking with timer and mood capture, song library management with status progression, daily streak tracking with milestone celebrations, and detailed analytics. Designed for rock/pop musicians ages 16-45 who want to level up their skills.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'SQLDELIGHT', 'SUPABASE', 'KOIN', 'VOYAGER'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: '#',
+    githubUrl: '#',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0-alpha',
+    features: [
+      'PRACTICE SESSION TIMER WITH PAUSE/RESUME',
+      'SONG LIBRARY WITH STATUS PROGRESSION',
+      'DAILY STREAK TRACKING AND MILESTONES',
+      'SESSION MOOD CAPTURE AND NOTES',
+      'DETAILED PRACTICE ANALYTICS',
+      'OFFLINE-FIRST WITH CLOUD SYNC',
+      'GAMIFICATION AND ACHIEVEMENTS',
+      'FREEMIUM WITH PREMIUM FEATURES'
+    ],
+    images: [
+      '/images/projects/practiceflow/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/practiceflow/icon.png'
     ],
     tabletImages: []
   }
