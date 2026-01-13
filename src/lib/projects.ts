@@ -246,6 +246,37 @@ export const projects: Project[] = [
       '/images/projects/practiceflow/icon.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'markdownviewer',
+    title: 'MARKDOWN_FLOW.APP',
+    category: 'Developer Tools',
+    description: 'A cross-platform markdown viewer with integrated Mermaid diagram support. Render markdown files and URLs with full GFM support and beautiful diagram visualizations.',
+    longDescription: 'Markdown Flow is a Kotlin Multiplatform application that renders markdown files with integrated Mermaid diagram support. Features full CommonMark and GitHub Flavored Markdown rendering, syntax highlighting for 15+ languages, and real-time Mermaid diagram visualization including flowcharts, sequence diagrams, class diagrams, and more. Open files locally or from URLs with recent file tracking.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'KTOR', 'MERMAID_JS', 'MATERIAL3', 'FIREBASE'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: '#',
+    githubUrl: '#',
+    status: 'BETA',
+    version: 'v1.0',
+    features: [
+      'FULL GITHUB FLAVORED MARKDOWN',
+      'MERMAID DIAGRAM RENDERING',
+      'SYNTAX HIGHLIGHTING FOR 15+ LANGUAGES',
+      'OPEN LOCAL FILES OR REMOTE URLS',
+      'RECENT FILES AND URLS TRACKING',
+      'LIGHT AND DARK THEME SUPPORT',
+      'FULL-SCREEN DIAGRAM VIEWER',
+      'CROSS-PLATFORM iOS AND ANDROID'
+    ],
+    images: [
+      '/images/projects/markdownviewer/icon.png',
+      '/images/projects/markdownviewer/screenshot.png'
+    ],
+    mobileImages: [
+      '/images/projects/markdownviewer/screenshot.png'
+    ],
+    tabletImages: []
   }
 ];
 
