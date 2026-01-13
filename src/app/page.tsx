@@ -1,7 +1,7 @@
 import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
 import SkillsSection from '@/components/SkillsSection'
-import ProjectsListSection from '@/components/ProjectsListSection'
+import ProjectsSection from '@/components/ProjectsSection'
 import ContactSection from '@/components/ContactSection'
 import Link from 'next/link'
 
@@ -12,52 +12,43 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <ProjectsListSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
-      
+
       {/* Footer */}
-      <footer className="py-16 relative overflow-hidden scanlines max-w-full mx-auto">
-        <div className="absolute inset-0 retro-grid opacity-10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <footer className="py-12 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="retro-card p-8 max-w-2xl mx-auto">
-              <h3 className="text-3xl font-black mb-4 font-mono tracking-wider">
-                <span className="tech-text">[MD]</span> <span className="tech-accent">PORTFOLIO</span>
-              </h3>
-              <p className="text-gray-300 mb-6 font-mono">
-                &gt;&gt;&gt; MOBILE APPLICATION DEVELOPER<br />
-                &gt;&gt;&gt; 30+ YEARS OF EXPERIENCE
+            <div className="mb-6">
+              <span className="text-xl font-bold">
+                <span className="text-blue-500">Mark</span>
+                <span className="text-slate-300">Duenas</span>
+              </span>
+              <p className="text-slate-500 text-sm mt-2">
+                Senior Mobile App Developer • 30+ Years Experience
               </p>
-              
-              {/* Legal Links */}
-              <div className="flex justify-center gap-6 mb-6">
-                <Link 
-                  href="/terms"
-                  className="retro-card px-4 py-2 bg-black hover:bg-gray-700 transition-colors"
-                >
-                  <span className="text-sm font-mono tracking-wider text-gray-300 hover:text-blue-400">
-                    TERMS.EXE
-                  </span>
-                </Link>
-                <Link 
-                  href="/privacy"
-                  className="retro-card px-4 py-2 bg-black hover:bg-gray-700 transition-colors"
-                >
-                  <span className="text-sm font-mono tracking-wider text-gray-300 hover:text-blue-400">
-                    PRIVACY.CFG
-                  </span>
-                </Link>
-              </div>
-              
-              <div className="terminal p-4">
-                <div className="green-text font-mono text-xs">
-                  &gt; COPYRIGHT.DAT<br />
-                  &gt; © {new Date().getFullYear()} MARK DUENAS. ALL RIGHTS RESERVED.<br />
-                  &gt; STATUS: <span className="tech-text">ONLINE</span>
-                </div>
-              </div>
             </div>
+
+            {/* Legal Links */}
+            <div className="flex justify-center gap-6 mb-6">
+              <Link
+                href="/terms"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                Terms
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                Privacy
+              </Link>
+            </div>
+
+            <p className="text-slate-500 text-sm">
+              © {new Date().getFullYear()} Mark Duenas. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

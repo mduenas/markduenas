@@ -12,137 +12,121 @@ export default function AboutSection() {
   const achievements = [
     {
       icon: Calendar,
-      title: "30+ YEARS",
-      description: "Professional software development experience",
-      color: "tech-text"
+      title: "30+ Years",
+      description: "Professional software development experience"
     },
     {
       icon: Award,
-      title: "INDUSTRY PIONEER", 
-      description: "Early adopter of mobile technologies since the 1990s",
-      color: "tech-accent"
+      title: "Industry Pioneer",
+      description: "Early adopter of mobile technologies since the 1990s"
     },
     {
       icon: Users,
-      title: "MILLION+ USERS",
-      description: "Apps reaching millions of users worldwide",
-      color: "green-text"
+      title: "Million+ Users",
+      description: "Apps reaching millions of users worldwide"
     },
     {
       icon: Zap,
-      title: "INNOVATION FOCUS",
-      description: "Constantly exploring cutting-edge technologies",
-      color: "amber-text"
+      title: "Innovation Focus",
+      description: "Constantly exploring cutting-edge technologies"
     },
   ]
 
   const timeline = [
     {
       period: "1990s",
-      title: "EARLY COMPUTING",
+      title: "Early Computing",
       description: "Started with desktop applications and system programming",
       icon: Code,
-      color: "bg-blue-600"
+      color: "bg-blue-500"
     },
     {
-      period: "2000s", 
-      title: "WEB DEVELOPMENT",
+      period: "2000s",
+      title: "Web Development",
       description: "Transitioned to web technologies and server-side development",
       icon: Globe,
-      color: "bg-teal-600"
+      color: "bg-cyan-500"
     },
     {
       period: "2007+",
-      title: "MOBILE REVOLUTION",
+      title: "Mobile Revolution",
       description: "Embraced iOS development from the App Store launch",
       icon: Smartphone,
-      color: "bg-green-600"
+      color: "bg-green-500"
     },
     {
-      period: "PRESENT",
-      title: "AI & MODERN MOBILE",
+      period: "Present",
+      title: "AI & Modern Mobile",
       description: "Leading-edge development with AI integration and modern frameworks",
       icon: Brain,
-      color: "bg-orange-600"
+      color: "bg-purple-500"
     },
   ]
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden scanlines" ref={ref}>
-      {/* Retro Background */}
-      <div className="absolute inset-0 retro-grid opacity-10"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - CENTERED */}
+    <section id="about" className="py-24 relative" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-wider">
-            <span className="tech-accent">ABOUT</span> <span className="tech-text">ME</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            About <span className="text-blue-500">Me</span>
           </h2>
-          <div className="retro-card p-6 max-w-4xl mx-auto">
-            <p className="text-xl text-white font-mono leading-relaxed">
-              {`>>>`} THREE DECADES OF PASSION-DRIVEN DEVELOPMENT<br />
-              {`>>>`} FROM DESKTOP APPLICATIONS TO CUTTING-EDGE MOBILE EXPERIENCES
-            </p>
-          </div>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            Three decades of passion-driven development, from desktop applications to cutting-edge mobile experiences.
+          </p>
         </motion.div>
 
-        {/* Split Layout - CENTERED */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-32 max-w-6xl mx-auto">
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Left Column - Story */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-6"
           >
-            <div className="retro-card p-8">
-              <h3 className="text-2xl font-black text-white mb-6 font-mono tracking-wider flex items-center gap-3">
-                <div className="w-4 h-4 bg-blue-400 rotate-45"></div>
-                MY JOURNEY.EXE
-              </h3>
-              
-              <div className="space-y-6 text-gray-300 leading-relaxed font-mono">
+            <div className="card p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">My Journey</h3>
+              <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  {`>>>`} INITALIZED IN EARLY 1990s WHEN PERSONAL COMPUTERS WERE BECOMING MAINSTREAM. 
-                  OVER THREE DECADES, I'VE WITNESSED AND PARTICIPATED IN THE EVOLUTION OF TECHNOLOGY—FROM DESKTOP 
-                  APPLICATIONS TO THE MOBILE REVOLUTION.
+                  My career began in the early 1990s when personal computers were becoming mainstream.
+                  Over three decades, I've witnessed and participated in the evolution of technology—from desktop
+                  applications to the mobile revolution.
                 </p>
                 <p>
-                  {`>>>`} WHAT STARTED AS CURIOSITY ABOUT PROGRAMMING EVOLVED INTO A PASSION FOR CREATING MOBILE EXPERIENCES. 
-                  DEVELOPING FOR iOS SINCE APP STORE LAUNCH 2008, EXPANDED TO ANDROID AND CROSS-PLATFORM DEVELOPMENT.
+                  What started as curiosity about programming evolved into a passion for creating mobile experiences.
+                  I've been developing for iOS since the App Store launch in 2008, and have expanded to Android and
+                  cross-platform development.
                 </p>
                 <p>
-                  {`>>>`} TODAY: BUILDING PRACTICAL, USER-CENTERED MOBILE APPLICATIONS. EXPERIENCE SPANS FROM UTILITY APPS 
-                  TO COMPLEX ENTERPRISE SOLUTIONS. ALWAYS EMPHASIZING CLEAN CODE AND RELIABLE PERFORMANCE.
+                  Today, I focus on building practical, user-centered mobile applications. My experience spans from
+                  utility apps to complex enterprise solutions, always emphasizing clean code and reliable performance.
                 </p>
               </div>
             </div>
 
-            <div className="retro-card p-8">
-              <h4 className="text-xl font-black text-white mb-6 font-mono tracking-wider flex items-center gap-3">
-                <div className="w-4 h-4 bg-teal-400 rotate-45"></div>
-                CORE_VALUES.DAT
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="card p-6">
+              <h4 className="text-lg font-semibold text-white mb-4">Core Values</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  "USER-FIRST DESIGN PHILOSOPHY",
-                  "CLEAN, MAINTAINABLE CODE", 
-                  "CONTINUOUS LEARNING & ADAPTATION",
-                  "PRACTICAL SOLUTIONS OVER COMPLEXITY"
+                  "User-first design philosophy",
+                  "Clean, maintainable code",
+                  "Continuous learning",
+                  "Practical solutions"
                 ].map((value, index) => (
                   <motion.div
                     key={value}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
-                    className="flex items-center gap-3 text-gray-300 font-mono text-sm"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                    transition={{ delay: 0.3 + index * 0.05, duration: 0.4 }}
+                    className="flex items-center gap-2 text-slate-300 text-sm"
                   >
-                    <div className="w-2 h-2 bg-green-400 rotate-45 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></div>
                     <span>{value}</span>
                   </motion.div>
                 ))}
@@ -152,28 +136,28 @@ export default function AboutSection() {
 
           {/* Right Column - Achievements */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-6"
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-4"
           >
             {achievements.map((achievement, index) => (
               <motion.div
                 key={achievement.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="retro-card p-6 hover:bg-gray-700/30 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="card p-5 hover:border-blue-500/30 transition-all duration-200"
               >
                 <div className="flex items-start gap-4">
-                  <div className="retro-card p-3 bg-black group-hover:bg-gray-700 transition-all duration-300">
-                    <achievement.icon className={`w-8 h-8 ${achievement.color}`} />
+                  <div className="p-2.5 rounded-lg bg-blue-500/10">
+                    <achievement.icon className="w-5 h-5 text-blue-400" />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-black text-white mb-2 font-mono tracking-wider">
+                  <div>
+                    <h4 className="text-base font-semibold text-white mb-1">
                       {achievement.title}
                     </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed font-mono">
+                    <p className="text-slate-400 text-sm">
                       {achievement.description}
                     </p>
                   </div>
@@ -183,56 +167,39 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Timeline - CENTERED */}
+        {/* Timeline */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="relative max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-4xl font-black text-center mb-16 font-mono tracking-wider">
-            <span className="green-text">TECHNOLOGY</span> <span className="tech-accent">EVOLUTION</span>
+          <h3 className="text-2xl font-bold text-center mb-12">
+            Technology <span className="text-blue-500">Evolution</span>
           </h3>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-blue-500 via-teal-500 to-green-500 opacity-60"></div>
-            
-            <div className="space-y-16">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.period}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
-                  className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                    <div className="retro-card p-6 group hover:bg-gray-700/30 transition-all duration-300">
-                      <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`retro-card p-2 ${item.color}`}>
-                          <item.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="font-black text-3xl font-mono tracking-wider tech-text">
-                          {item.period}
-                        </div>
-                      </div>
-                      <h4 className="text-xl font-black text-white mb-3 font-mono tracking-wider">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-300 text-sm leading-relaxed font-mono">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline dot */}
-                  <div className={`relative z-10 w-8 h-8 ${item.color} border-4 border-white retro-pulse`}></div>
-                  
-                  <div className="w-1/2"></div>
-                </motion.div>
-              ))}
-            </div>
+
+          <div className="grid md:grid-cols-4 gap-4">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={item.period}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                className="card p-5 text-center"
+              >
+                <div className={`w-10 h-10 ${item.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
+                  <item.icon className="w-5 h-5 text-white" />
+                </div>
+                <div className="text-blue-400 font-semibold text-sm mb-1">
+                  {item.period}
+                </div>
+                <h4 className="text-white font-medium mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-slate-400 text-sm">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

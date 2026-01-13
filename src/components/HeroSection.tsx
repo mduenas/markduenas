@@ -1,34 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, Download, Zap, Star, Cpu } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { ArrowDown, Github, Linkedin, Mail, ChevronRight } from 'lucide-react'
 
 export default function HeroSection() {
-  const [glitchText, setGlitchText] = useState('MARK DUENAS')
-
-  useEffect(() => {
-    const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
-    const originalText = 'MARK DUENAS'
-    
-    const glitch = () => {
-      let result = ''
-      for (let i = 0; i < originalText.length; i++) {
-        if (Math.random() < 0.1) {
-          result += glitchChars[Math.floor(Math.random() * glitchChars.length)]
-        } else {
-          result += originalText[i]
-        }
-      }
-      setGlitchText(result)
-      
-      setTimeout(() => setGlitchText(originalText), 100)
-    }
-
-    const interval = setInterval(glitch, 4000)
-    return () => clearInterval(interval)
-  }, [])
-
   const handleScroll = (targetId: string) => {
     const element = document.querySelector(targetId)
     if (element) {
@@ -37,194 +12,155 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden scanlines vhs-effect">
-      {/* Retro Grid Background */}
-      <div className="absolute inset-0 retro-grid opacity-20"></div>
-      
-      {/* Floating Retro Elements */}
-      <div className="absolute top-20 left-10 retro-float opacity-60">
-        <Zap className="w-12 h-12 tech-text" />
-      </div>
-      <div className="absolute top-32 right-20 retro-float opacity-60" style={{ animationDelay: '2s' }}>
-        <Star className="w-8 h-8 amber-text" />
-      </div>
-      <div className="absolute bottom-40 left-20 retro-float opacity-60" style={{ animationDelay: '4s' }}>
-        <Cpu className="w-10 h-10 green-text" />
-      </div>
-      <div className="absolute top-1/2 right-10 retro-float opacity-40" style={{ animationDelay: '1s' }}>
-        <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-teal-500 retro-pulse"></div>
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="space-y-12"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8"
         >
-          {/* Retro Profile */}
+          {/* Profile Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="flex justify-center mb-12"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex justify-center"
           >
             <div className="relative">
-              <div className="w-40 h-40 retro-card p-2 retro-pulse">
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 flex items-center justify-center">
-                  <span className="text-5xl font-black text-white">MD</span>
-                </div>
+              <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                <span className="text-4xl font-bold text-white">MD</span>
               </div>
-              {/* Online Indicator */}
-              <div className="absolute -top-2 -right-2 w-12 h-12 retro-card bg-green-600 flex items-center justify-center">
-                <span className="text-xs font-bold text-white">ON</span>
-              </div>
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900"></div>
             </div>
           </motion.div>
 
-          {/* Glitch Name Title */}
+          {/* Name */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="space-y-6"
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-wider glitch" data-text={glitchText}>
-              <span className="text-teal-400">{glitchText}</span>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <span className="text-white">Mark </span>
+              <span className="text-blue-500">Duenas</span>
             </h1>
-            
-            <div className="relative">
-              <h2 className="text-2xl md:text-4xl font-bold tracking-widest">
-                <span className="tech-text">MOBILE APP</span>{' '}
-                <span className="tech-accent">DEVELOPER</span>
-              </h2>
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-64 h-2 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-600 opacity-60"></div>
-            </div>
           </motion.div>
 
-          {/* Retro Description */}
+          {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="retro-card p-8 max-w-4xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <p className="text-xl md:text-2xl text-white leading-relaxed font-mono">
-              {`>>>`} INITIALIZING PORTFOLIO.EXE<br />
-              {`>>>`} LOADING EXPERIENCE: <span className="tech-text font-bold">30+ YEARS</span><br />
-              {`>>>`} PLATFORMS: <span className="tech-accent font-bold">iOS</span> | <span className="green-text font-bold">ANDROID</span><br />
-              {`>>>`} STATUS: <span className="amber-text font-bold">READY FOR ACTION</span>
-            </p>
+            <h2 className="text-xl md:text-2xl text-slate-400 font-medium">
+              Senior Mobile App Developer
+            </h2>
           </motion.div>
 
-          {/* Retro Stats */}
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed"
+          >
+            30+ years of experience building iOS and Android applications.
+            Specializing in native development, cross-platform solutions, and creating
+            exceptional mobile experiences.
+          </motion.p>
+
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap justify-center gap-8 py-6"
           >
             {[
-              { number: '30+', label: 'YEARS', color: 'tech-text' },
-              { number: '50+', label: 'APPS', color: 'tech-accent' },
-              { number: '10M+', label: 'DOWNLOADS', color: 'green-text' },
-              { number: '4.8★', label: 'RATING', color: 'amber-text' }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-                className="retro-card p-6 text-center group hover:bg-gray-700 transition-all duration-300"
-              >
-                <div className={`text-3xl md:text-4xl font-black ${stat.color} mb-2`}>
+              { number: '30+', label: 'Years Experience' },
+              { number: '50+', label: 'Apps Built' },
+              { number: '10M+', label: 'Downloads' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white">
                   {stat.number}
                 </div>
-                <div className="text-sm text-gray-300 font-mono tracking-widest">
+                <div className="text-sm text-slate-500 mt-1">
                   {stat.label}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
 
-          {/* Retro Buttons */}
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="flex flex-col sm:flex-row justify-center gap-8 pt-12"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row justify-center gap-4 pt-4"
           >
             <button
               onClick={() => handleScroll('#projects')}
-              className="retro-btn text-lg flex items-center justify-center gap-4 min-w-[250px]"
+              className="btn-primary px-8 py-3 text-base flex items-center justify-center gap-2"
             >
-              <span>VIEW PROJECTS</span>
-              <Zap className="w-5 h-5" />
+              View Projects
+              <ChevronRight className="w-4 h-4" />
             </button>
             <button
               onClick={() => handleScroll('#contact')}
-              className="retro-btn-secondary text-lg flex items-center justify-center gap-4 min-w-[250px]"
+              className="btn-secondary px-8 py-3 text-base flex items-center justify-center gap-2"
             >
-              <span>CONTACT</span>
-              <Mail className="w-5 h-5" />
+              Get in Touch
+              <Mail className="w-4 h-4" />
             </button>
           </motion.div>
 
-          {/* Retro Social Links */}
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="flex justify-center space-x-8 pt-8"
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="flex justify-center gap-4 pt-6"
           >
             {[
-              { icon: Github, href: 'https://github.com/mduenas', label: 'GITHUB' },
-              { icon: Linkedin, href: 'https://www.linkedin.com/in/mduenas/', label: 'LINKEDIN' },
-              { icon: Mail, href: 'mailto:markduenas@gmail.com', label: 'EMAIL' },
-              { icon: Download, href: '#', label: 'RESUME' }
-            ].map((social, index) => (
-              <motion.a
+              { icon: Github, href: 'https://github.com/mduenas', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/mduenas/', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:markduenas@gmail.com', label: 'Email' },
+            ].map((social) => (
+              <a
                 key={social.label}
                 href={social.href}
                 target={social.href.startsWith('http') ? '_blank' : undefined}
                 rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                whileHover={{ scale: 1.1, y: -4 }}
-                whileTap={{ scale: 0.95 }}
-                className="retro-card p-4 hover:bg-gray-700 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-3 rounded-lg bg-slate-800/50 text-slate-400 hover:text-white hover:bg-slate-700/50 transition-all duration-200"
+                aria-label={social.label}
               >
-                <social.icon className="w-8 h-8 text-gray-300 group-hover:text-blue-400 transition-colors" />
-              </motion.a>
+                <social.icon className="w-5 h-5" />
+              </a>
             ))}
-          </motion.div>
-
-          {/* Terminal Prompt */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.4 }}
-            className="pt-8"
-          >
-            <div className="terminal max-w-md mx-auto">
-              <p className="font-mono text-left">
-                <span className="green-text">C:\PORTFOLIO{`>`}</span> <span className="animate-pulse">_</span>
-              </p>
-            </div>
           </motion.div>
         </motion.div>
 
-        {/* Retro Scroll Indicator */}
+        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6 }}
+          transition={{ duration: 0.6, delay: 1 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <button
             onClick={() => handleScroll('#about')}
-            className="retro-card p-4 hover:bg-gray-700 transition-all duration-300 animate-bounce"
+            className="p-2 text-slate-500 hover:text-blue-400 transition-colors animate-bounce"
+            aria-label="Scroll down"
           >
-            <ArrowDown className="w-8 h-8 tech-text" />
+            <ArrowDown className="w-6 h-6" />
           </button>
         </motion.div>
       </div>

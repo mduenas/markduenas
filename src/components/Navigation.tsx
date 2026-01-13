@@ -5,11 +5,11 @@ import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navItems = [
-  { href: '#home', label: 'HOME' },
-  { href: '#about', label: 'ABOUT' },
-  { href: '#skills', label: 'SKILLS' },
-  { href: '#projects', label: 'PROJECTS' },
-  { href: '#contact', label: 'CONTACT' },
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Navigation() {
@@ -20,8 +20,7 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
-      
-      // Update active section based on scroll position
+
       const sections = navItems.map(item => item.href.substring(1))
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
@@ -31,7 +30,7 @@ export default function Navigation() {
         }
         return false
       })
-      
+
       if (currentSection) {
         setActiveSection(currentSection)
       }
@@ -53,23 +52,24 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'retro-card border-b-2 border-gray-600'
+          ? 'glass border-b border-slate-700/50'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-3xl font-black"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-xl font-bold"
           >
-            <span className="tech-text font-mono">[MD]</span>
+            <span className="text-blue-500">Mark</span>
+            <span className="text-slate-300">Duenas</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -79,19 +79,19 @@ export default function Navigation() {
                 key={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+                transition={{ delay: 0.2 + index * 0.05, duration: 0.4 }}
                 onClick={() => handleNavClick(item.href)}
-                className={`relative px-6 py-3 font-mono font-bold text-sm tracking-wider transition-all duration-300 ${
+                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   activeSection === item.href.substring(1)
-                    ? 'retro-card tech-text bg-gray-700'
-                    : 'text-gray-300 hover:text-blue-400 hover:bg-gray-700/30 border-2 border-transparent hover:border-gray-500'
+                    ? 'text-blue-400 bg-blue-500/10'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
                 }`}
               >
                 {item.label}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
-                    layoutId="activeRetroIndicator"
-                    className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-orange-400 rotate-45"
+                    layoutId="activeIndicator"
+                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -104,9 +104,9 @@ export default function Navigation() {
             <motion.button
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="retro-card p-3 tech-text hover:bg-gray-700 transition-all duration-300"
+              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
@@ -121,24 +121,24 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden retro-card border-t-2 border-gray-600"
+            transition={{ duration: 0.2 }}
+            className="md:hidden glass border-t border-slate-700/50"
           >
-            <div className="px-4 py-6 space-y-2">
+            <div className="px-4 py-4 space-y-1">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  transition={{ delay: index * 0.05, duration: 0.2 }}
                   onClick={() => handleNavClick(item.href)}
-                  className={`block w-full text-left px-6 py-4 font-mono font-bold text-lg tracking-wider transition-all duration-300 ${
+                  className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                     activeSection === item.href.substring(1)
-                      ? 'retro-card tech-text bg-gray-700 border-l-4 border-orange-400'
-                      : 'text-gray-300 hover:text-blue-400 hover:bg-gray-700/30 border-2 border-transparent hover:border-gray-500'
+                      ? 'text-blue-400 bg-blue-500/10'
+                      : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
                   }`}
                 >
-                  {`>>`} {item.label}
+                  {item.label}
                 </motion.button>
               ))}
             </div>
