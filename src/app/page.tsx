@@ -1,9 +1,9 @@
-import HeroSection from '@/components/HeroSection'
-import AboutSection from '@/components/AboutSection'
-import SkillsSection from '@/components/SkillsSection'
-import ProjectsSection from '@/components/ProjectsSection'
-import ContactSection from '@/components/ContactSection'
-import Link from 'next/link'
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
                 <span className="text-slate-300">Duenas</span>
               </span>
               <p className="text-slate-500 text-sm mt-2">
-                Senior Mobile App Developer • 30+ Years Experience
+                Mobile App Developer / Agentic Engineer • 30+ Years Experience
               </p>
             </div>
 
@@ -53,5 +53,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
