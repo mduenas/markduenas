@@ -277,6 +277,36 @@ export const projects: Project[] = [
       '/images/projects/markdownviewer/screenshot.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'windule',
+    title: 'WINDULE.APP',
+    category: 'Business & Productivity',
+    description: 'Professional window cleaning business management app. Schedule appointments, optimize routes, manage customers, generate invoices, and collaborate with your team.',
+    longDescription: 'Windule is the complete solution for window cleaning professionals built with Kotlin Multiplatform. Features smart scheduling with drag-and-drop calendar, automatic route optimization to save time and fuel, complete customer management with service history, professional invoicing with payment tracking, team collaboration with real-time syncing, and comprehensive business analytics. Perfect for solo window cleaners to established companies with unlimited users.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'FIREBASE', 'MAPS', 'ICLOUD_SYNC', 'IN_APP_PURCHASES'],
+    platforms: ['Android', 'iOS', 'iPadOS'],
+    appStoreUrl: 'https://windule.com',
+    githubUrl: '#',
+    status: 'PRODUCTION',
+    version: 'v1.0',
+    features: [
+      'SMART SCHEDULING WITH DRAG-AND-DROP',
+      'AUTOMATIC ROUTE OPTIMIZATION',
+      'CUSTOMER MANAGEMENT AND HISTORY',
+      'PROFESSIONAL INVOICE GENERATION',
+      'TEAM COLLABORATION AND SYNCING',
+      'BUSINESS ANALYTICS AND REPORTS',
+      'ICLOUD SYNC ACROSS DEVICES',
+      'FREEMIUM WITH PRO/TEAM/BUSINESS TIERS'
+    ],
+    images: [
+      '/images/projects/windule/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/windule/icon.png'
+    ],
+    tabletImages: []
   }
 ];
 
