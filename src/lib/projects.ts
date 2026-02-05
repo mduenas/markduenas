@@ -307,6 +307,39 @@ export const projects: Project[] = [
       '/images/projects/windule/icon.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'homesteader',
+    title: 'HOMESTEADER.APP',
+    category: 'Agriculture & Farming',
+    description: 'Comprehensive livestock and farm animal management app for homesteaders. Track animals, breeding cycles, health records, production data, and more.',
+    longDescription: 'Homesteader is a complete farm management solution built with Kotlin Multiplatform for Android and iOS. Track your entire herd with support for cattle, goats, sheep, pigs, poultry, horses, and more. Features breeding management with gestation tracking, health records with vaccination and treatment logs, production tracking for milk and eggs, event calendar with reminders, and detailed reports. Perfect for small farms and homesteads.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'SQLDELIGHT', 'FIREBASE', 'KOIN', 'VOYAGER'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: '#',
+    githubUrl: '#',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0',
+    features: [
+      'MULTI-SPECIES ANIMAL TRACKING',
+      'BREEDING AND GESTATION MANAGEMENT',
+      'HEALTH RECORDS AND VACCINATIONS',
+      'MILK AND EGG PRODUCTION TRACKING',
+      'EVENT CALENDAR WITH REMINDERS',
+      'DETAILED REPORTS AND ANALYTICS',
+      'CSV IMPORT AND DATA BACKUP',
+      'DARK AND LIGHT THEME SUPPORT'
+    ],
+    images: [
+      '/images/projects/homesteader/icon.png',
+      '/images/projects/homesteader/dashboard_light.png'
+    ],
+    mobileImages: [
+      '/images/projects/homesteader/dashboard_light.png',
+      '/images/projects/homesteader/animal_list_light.png',
+      '/images/projects/homesteader/calendar_light.png'
+    ],
+    tabletImages: []
   }
 ];
 
