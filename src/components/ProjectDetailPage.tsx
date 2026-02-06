@@ -274,6 +274,15 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
                 <ExternalLink className="w-4 h-4" />
                 App Store
               </a>
+              {project.playStoreUrl && (
+                <a
+                  href={project.playStoreUrl}
+                  className="btn-primary flex-1 flex items-center justify-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Play Store
+                </a>
+              )}
               <a
                 href={project.githubUrl}
                 className="btn-secondary flex-1 flex items-center justify-center gap-2"

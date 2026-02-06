@@ -204,6 +204,15 @@ export default function ProjectsListSection() {
                         <ExternalLink className="w-4 h-4" />
                         <span>APP STORE</span>
                       </a>
+                      {project.playStoreUrl && (
+                        <a
+                          href={project.playStoreUrl}
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span>PLAY STORE</span>
+                        </a>
+                      )}
                       <a
                         href={project.githubUrl}
                         className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
