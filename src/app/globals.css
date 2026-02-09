@@ -33,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -41,6 +42,43 @@ body {
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > * {
+  width: 100%;
+}
+
+/* Ensure all containers are centered */
+section > div,
+nav > div,
+footer > div {
+  max-width: 1024px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  section > div,
+  nav > div,
+  footer > div {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section > div,
+  nav > div,
+  footer > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 /* Modern Scrollbar */

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <main className="max-w-full mx-auto">
+      <main className="w-full">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-6">
               <span className="text-xl font-bold">

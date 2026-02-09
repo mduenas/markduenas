@@ -81,7 +81,7 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="py-24 relative bg-slate-900/50" ref={ref}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

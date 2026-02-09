@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
         <ConditionalNavigation />
-        <main className="relative overflow-hidden">
+        <main className="relative overflow-hidden w-full">
           {children}
         </main>
       </body>
