@@ -391,7 +391,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: '#',
-    status: 'DEVELOPMENT',
+    status: 'PRODUCTION',
     version: 'v1.0.0',
     features: [
       'MULTI-SPECIES ANIMAL TRACKING',
