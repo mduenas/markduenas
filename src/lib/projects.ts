@@ -143,7 +143,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: '#',
-    status: 'BETA',
+    status: 'PRODUCTION',
     version: 'v0.9.1',
     features: [
       'BATTERY REPLACEMENT TRACKING',
@@ -204,7 +204,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: 'https://github.com/markduenas/rockskipper',
-    status: 'DEVELOPMENT',
+    status: 'PRODUCTION',
     version: 'v1.0.0-alpha',
     features: [
       'REAL-TIME AUDIO SKIP DETECTION',
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: '#',
-    status: 'DEVELOPMENT',
+    status: 'PRODUCTION',
     version: 'v1.0.0-alpha',
     features: [
       'PRACTICE SESSION TIMER WITH PAUSE/RESUME',
@@ -266,7 +266,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: '#',
-    status: 'BETA',
+    status: 'PRODUCTION',
     version: 'v1.0',
     features: [
       'FULL GITHUB FLAVORED MARKDOWN',
