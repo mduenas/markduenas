@@ -319,6 +319,37 @@ export const projects: Project[] = [
     tabletImages: []
   },
   {
+    id: 'kindling',
+    title: 'KINDLING.APP',
+    category: 'Education & Self-Improvement',
+    description: 'A personal and communal wisdom companion. Discover curated insights from books, philosophy, and science. Capture your own with source attribution, and see how they connect.',
+    longDescription: 'Kindling is a mobile-first insight companion that combines an admin-curated wisdom library with private, local-first personal capture and intelligent linking. Browse a daily-growing library of insights spanning philosophy, psychology, science, business, and creativity. Record personal insights with structured source attribution stored on-device for speed and privacy. Smart matching automatically surfaces connections between your personal insights and the curated library — revealing patterns in your thinking.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'FIREBASE', 'FIRESTORE', 'REVENUECAT', 'MATERIAL3'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
+    playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
+    githubUrl: '#',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0-alpha',
+    features: [
+      'CURATED WISDOM LIBRARY WITH ADMIN CURATION',
+      'PERSONAL INSIGHT CAPTURE WITH SOURCE ATTRIBUTION',
+      'SMART MATCHING — PERSONAL LINKS TO COMMON INSIGHTS',
+      'LOCAL-FIRST STORAGE WITH OPTIONAL CLOUD SYNC',
+      'DAILY INSIGHT FEED WITH DISCOVERY',
+      'SPACED REPETITION FOR INSIGHT RETENTION',
+      'TAGS, COLLECTIONS, AND ADVANCED SEARCH',
+      'FREEMIUM WITH SEEKER AND SAGE TIERS'
+    ],
+    images: [
+      '/images/projects/kindling/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/kindling/icon.png'
+    ],
+    tabletImages: []
+  },
+  {
     id: 'homesteader',
     title: 'STEADY_HAND.APP',
     category: 'Agriculture & Farming',
