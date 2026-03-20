@@ -319,6 +319,37 @@ export const projects: Project[] = [
     tabletImages: []
   },
   {
+    id: 'visitingscheduler',
+    title: 'VISIT_SCHEDULER.APP',
+    category: 'Health & Medical',
+    description: 'Proxy visit scheduling platform for caregivers, family members, and coordinators managing visits on behalf of hospital patients, elderly individuals, or those in care facilities.',
+    longDescription: 'VisitScheduler is a comprehensive visit scheduling platform purpose-built for proxy scheduling — enabling caregivers, family members, or designated coordinators to manage and schedule visits on behalf of individuals who cannot do so themselves. Features a powerful restriction engine for medical schedules, multi-role access with hierarchical approval workflows, intelligent fatigue management, care circle coordination, and HIPAA-compliant communication. Built with Kotlin Multiplatform for native Android and iOS.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'SQLDELIGHT', 'FIREBASE', 'FIREBASE_CRASHLYTICS', 'MATERIAL3'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
+    playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
+    githubUrl: '#',
+    status: 'DEVELOPMENT',
+    version: 'v1.0.0-alpha',
+    features: [
+      'PROXY SCHEDULING FOR CAREGIVERS AND COORDINATORS',
+      'MULTI-ROLE ACCESS WITH APPROVAL WORKFLOWS',
+      'MEDICAL RESTRICTION AND RULE ENGINE',
+      'INTELLIGENT FATIGUE AND CAPACITY MANAGEMENT',
+      'CARE CIRCLE COORDINATION AND TEAM FEATURES',
+      'AUTOMATED NOTIFICATIONS VIA SMS AND EMAIL',
+      'QR CODE CHECK-IN AND VISIT TRACKING',
+      'HIPAA-COMPLIANT WITH END-TO-END ENCRYPTION'
+    ],
+    images: [
+      '/images/projects/visitingscheduler/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/visitingscheduler/icon.png'
+    ],
+    tabletImages: []
+  },
+  {
     id: 'kindling',
     title: 'KINDLING.APP',
     category: 'Education & Self-Improvement',
