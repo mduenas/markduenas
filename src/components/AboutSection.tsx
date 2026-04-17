@@ -50,7 +50,7 @@ export default function AboutSection() {
     {
       period: "2007+",
       title: "Mobile Revolution",
-      description: "Embraced iOS development from the App Store launch",
+      description: "iOS from App Store launch; Android development across both major platforms",
       icon: Smartphone,
       color: "bg-green-500"
     },
@@ -100,8 +100,8 @@ export default function AboutSection() {
                 </p>
                 <p>
                   What started as curiosity about programming evolved into a passion for creating mobile experiences.
-                  I've been developing for iOS since the App Store launch in 2008, and have expanded to Android and
-                  cross-platform development.
+                  I've been developing for both iOS and Android since the early days of both platforms, building
+                  native apps and cross-platform solutions across 30+ years of mobile development.
                 </p>
                 <p>
                   Today, I focus on building practical, user-centered mobile applications. My experience spans from

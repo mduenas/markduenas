@@ -178,9 +178,9 @@ export default function SkillsSection() {
         >
           {[
             {
-              title: "iOS Specialist",
-              description: "Developing for iOS since 2008, from iPhone OS 2.0 to iOS 17+",
-              highlight: "Expert"
+              title: "iOS & Android",
+              description: "30+ years on both platforms — Swift/SwiftUI and Kotlin/Java, native all the way",
+              highlight: "Dual Platform"
             },
             {
               title: "Cross-Platform",

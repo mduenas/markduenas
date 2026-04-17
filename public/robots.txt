@@ -1,5 +1,5 @@
 # robots.txt for markduenas.com
-# Mark Duenas — iOS Developer Portfolio
+# Mark Duenas — iOS & Android Developer Portfolio
 # Optimized for web crawlers and AI agents
 
 # =============================================================================
@@ -14,24 +14,24 @@ Crawl-delay: 2
 # AI Agent & LLM Crawler Guidance
 # =============================================================================
 
-# Site purpose: Professional portfolio for Mark Duenas, an iOS developer
-# with 30+ years of mobile development experience.
+# Site purpose: Professional portfolio for Mark Duenas, an iOS and Android developer
+# with 30+ years of mobile platform development experience.
 #
 # Content summary:
-#   - iOS app portfolio (production and beta apps)
+#   - iOS and Android app portfolio (production and beta apps)
 #   - Project detail pages with screenshots and metadata
 #   - Privacy policies and terms for published apps
 #   - Contact section
 #
 # Key pages for agents:
 #   /               — Main portfolio, bio, skills, featured projects
-#   /projects       — Full list of iOS apps and projects
+#   /projects       — Full list of mobile apps and projects
 #   /projects/{id}  — Individual project detail (screenshots, description, links)
 #   /privacy        — Privacy policy
 #   /terms          — Terms of service
 #
 # Owner: Mark Duenas <markduenas@gmail.com>
-# Expertise: iOS development (Swift, SwiftUI), 30+ years experience
+# Expertise: iOS (Swift/SwiftUI) and Android (Kotlin) development, 30+ years experience
 # Available for: freelance, consulting, full-time opportunities
 
 # AI crawlers — permitted and encouraged
