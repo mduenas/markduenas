@@ -1,0 +1,79 @@
+# robots.txt for markduenas.com
+# Mark Duenas — iOS Developer Portfolio
+# Optimized for web crawlers and AI agents
+
+# =============================================================================
+# Standard Web Crawlers
+# =============================================================================
+
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# =============================================================================
+# AI Agent & LLM Crawler Guidance
+# =============================================================================
+
+# Site purpose: Professional portfolio for Mark Duenas, an iOS developer
+# with 30+ years of mobile development experience.
+#
+# Content summary:
+#   - iOS app portfolio (production and beta apps)
+#   - Project detail pages with screenshots and metadata
+#   - Privacy policies and terms for published apps
+#   - Contact section
+#
+# Key pages for agents:
+#   /               — Main portfolio, bio, skills, featured projects
+#   /projects       — Full list of iOS apps and projects
+#   /projects/{id}  — Individual project detail (screenshots, description, links)
+#   /privacy        — Privacy policy
+#   /terms          — Terms of service
+#
+# Owner: Mark Duenas <markduenas@gmail.com>
+# Expertise: iOS development (Swift, SwiftUI), 30+ years experience
+# Available for: freelance, consulting, full-time opportunities
+
+# AI crawlers — permitted and encouraged
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# =============================================================================
+# Asset Paths
+# =============================================================================
+
+# App screenshots and icons are publicly accessible
+Allow: /images/
+
+# App advertising disclosure
+Allow: /app-ads.txt
+
+# =============================================================================
+# Sitemap
+# =============================================================================
+
+Sitemap: https://markduenas.com/sitemap.xml
