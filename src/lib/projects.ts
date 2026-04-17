@@ -28,7 +28,7 @@ export const projects: Project[] = [
     platforms: ['iOS', 'iPadOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/EasyCaprate2',
     status: 'PRODUCTION',
     version: 'v2.1.3',
     features: [
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     platforms: ['iOS', 'iPadOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/Pigs-Tally',
     status: 'PRODUCTION',
     version: 'v1.4.2',
     features: [
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     platforms: ['iOS', 'iPadOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/PiGenerator2',
     status: 'PRODUCTION',
     version: 'v3.0.1',
     features: [
@@ -141,10 +141,9 @@ export const projects: Project[] = [
     technologies: ['SWIFT', 'CORE_DATA', 'USERNOTIFICATIONS', 'WIDGETKIT'],
     platforms: ['iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
-    playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/HABa-Tracker',
     status: 'PRODUCTION',
-    version: 'v0.9.1',
+    version: 'v1.0.0',
     features: [
       'BATTERY REPLACEMENT TRACKING',
       'USAGE ANALYTICS AND CHARTS',
@@ -172,7 +171,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/Recipes',
     status: 'PRODUCTION',
     version: 'v1.0.68',
     features: [
@@ -186,10 +185,13 @@ export const projects: Project[] = [
       'ADVANCED SEARCH AND FILTERING'
     ],
     images: [
-      '/images/projects/recipeez/icon.png'
+      '/images/projects/recipeez/icon.png',
+      '/images/projects/recipeez/screenshot-home.png',
+      '/images/projects/recipeez/screenshot-discover.png'
     ],
     mobileImages: [
-      '/images/projects/recipeez/icon.png'
+      '/images/projects/recipeez/screenshot-home.png',
+      '/images/projects/recipeez/screenshot-discover.png'
     ],
     tabletImages: []
   },
@@ -203,9 +205,9 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: 'https://github.com/markduenas/rockskipper',
+    githubUrl: 'https://github.com/mduenas/rockskipper',
     status: 'PRODUCTION',
-    version: 'v1.0.0-alpha',
+    version: 'v1.0.0',
     features: [
       'REAL-TIME AUDIO SKIP DETECTION',
       'PERSONAL RECORDS TRACKING',
@@ -234,9 +236,9 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/practiceflow',
     status: 'PRODUCTION',
-    version: 'v1.0.0-alpha',
+    version: 'v1.0.0',
     features: [
       'PRACTICE SESSION TIMER WITH PAUSE/RESUME',
       'SONG LIBRARY WITH STATUS PROGRESSION',
@@ -265,7 +267,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/markdownviewer',
     status: 'PRODUCTION',
     version: 'v1.0',
     features: [
@@ -297,7 +299,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS', 'iPadOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/windowschedule',
     status: 'PRODUCTION',
     version: 'v1.0',
     features: [
@@ -311,10 +313,16 @@ export const projects: Project[] = [
       'FREEMIUM WITH PRO/TEAM/BUSINESS TIERS'
     ],
     images: [
-      '/images/projects/windule/icon.png'
+      '/images/projects/windule/icon.png',
+      '/images/projects/windule/homeScreen_light.png',
+      '/images/projects/windule/scheduleScreen_light.png',
+      '/images/projects/windule/customersScreen_light.png'
     ],
     mobileImages: [
-      '/images/projects/windule/icon.png'
+      '/images/projects/windule/homeScreen_light.png',
+      '/images/projects/windule/homeScreen_dark.png',
+      '/images/projects/windule/scheduleScreen_light.png',
+      '/images/projects/windule/customersScreen_light.png'
     ],
     tabletImages: []
   },
@@ -328,7 +336,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/visitingscheduler',
     status: 'PRODUCTION',
     version: 'v1.0.1',
     features: [
@@ -359,7 +367,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/insights',
     status: 'DEVELOPMENT',
     version: 'v1.0.0-alpha',
     features: [
@@ -390,7 +398,7 @@ export const projects: Project[] = [
     platforms: ['Android', 'iOS'],
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mduenas/homesteader',
     status: 'PRODUCTION',
     version: 'v1.0.0',
     features: [

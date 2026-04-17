@@ -25,7 +25,7 @@ export default function ProjectsSection() {
             <span className="text-blue-500">Projects</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Mobile applications spanning finance, entertainment, education, and productivity
+            Mobile applications spanning finance, health, agriculture, games, education, productivity, and more
           </p>
         </motion.div>
 
