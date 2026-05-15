@@ -213,6 +213,17 @@ export default function ProjectsListSection() {
                           <span>PLAY STORE</span>
                         </a>
                       )}
+                      {project.websiteUrl && (
+                        <a
+                          href={project.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span>WEBSITE</span>
+                        </a>
+                      )}
                       <a
                         href={project.githubUrl}
                         className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"

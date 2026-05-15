@@ -292,6 +292,21 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
               </a>
             </div>
 
+            {/* Website / support link */}
+            {project.websiteUrl && (
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Visit {new URL(project.websiteUrl).hostname.replace('www.', '')}
+                </a>
+              </div>
+            )}
+
             {/* Special links for Recipeez */}
             {projectId === 'recipeez' && (
               <div className="flex flex-col sm:flex-row gap-3">

@@ -9,6 +9,7 @@ export interface Project {
   appStoreUrl: string;
   playStoreUrl?: string;
   githubUrl: string;
+  websiteUrl?: string;
   status: string;
   version: string;
   features: string[];
@@ -300,6 +301,7 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
     playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
     githubUrl: 'https://github.com/mduenas/windowschedule',
+    websiteUrl: 'https://www.windule.com',
     status: 'PRODUCTION',
     version: 'v1.0',
     features: [
