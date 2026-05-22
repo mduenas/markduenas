@@ -391,6 +391,35 @@ export const projects: Project[] = [
     tabletImages: []
   },
   {
+    id: 'scorr',
+    title: 'SCORR.APP',
+    category: 'Games & Sports',
+    description: 'A versatile multi-player scoreboard app for any game or sport. Track scores, manage players, and keep everyone engaged with smart templates and flexible scoring.',
+    longDescription: 'Scorr is a clean, fast scoreboard app built with Kotlin Multiplatform for Android and iOS. Choose from smart game templates (card games, board games, sports, and more) with pre-configured rules and scoring increments, or build a custom scoreboard from scratch. Features flexible multi-increment scoring buttons, game history with cloud sync via Firebase, and a distraction-free interface designed for game nights and group play.',
+    technologies: ['KOTLIN_MULTIPLATFORM', 'COMPOSE_MULTIPLATFORM', 'SQLDELIGHT', 'FIREBASE', 'KOIN', 'VOYAGER', 'MATERIAL3'],
+    platforms: ['Android', 'iOS'],
+    appStoreUrl: 'https://apps.apple.com/us/developer/mark-duenas/id1083533055',
+    playStoreUrl: 'https://play.google.com/store/apps/developer?id=Mark+Duenas',
+    githubUrl: 'https://github.com/mduenas/scorekeeper',
+    status: 'PRODUCTION',
+    version: 'v1.0',
+    features: [
+      'SMART GAME TEMPLATES FOR ANY GAME OR SPORT',
+      'MULTI-PLAYER SCOREBOARD WITH CUSTOM NAMES',
+      'FLEXIBLE SCORING WITH MULTI-INCREMENT BUTTONS',
+      'GAME HISTORY WITH CLOUD SYNC',
+      'LIGHT AND DARK THEME SUPPORT',
+      'CROSS-PLATFORM ANDROID AND iOS'
+    ],
+    images: [
+      '/images/projects/scorr/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/scorr/icon.png'
+    ],
+    tabletImages: []
+  },
+  {
     id: 'homesteader',
     title: 'STEADY_HAND.APP',
     category: 'Agriculture & Farming',
