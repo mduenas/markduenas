@@ -30,7 +30,7 @@ export default function MortlyPrivacyPolicyPage() {
         </p>
         <p>
           The portfolio website and other Mark Duenas apps are covered by a separate policy at{' '}
-          <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
+          <Link href="/privacy" className="text-emerald-400 hover:text-emerald-300">
             markduenas.com/privacy
           </Link>
           . That page mentions Firebase, advertising, and analytics. Those practices do not apply to Mortly MD.
@@ -100,13 +100,13 @@ export default function MortlyPrivacyPolicyPage() {
       <MortlySection title="Contact">
         <p>
           Privacy questions about Mortly MD go to Mark Duenas at{' '}
-          <a className="text-blue-400 hover:text-blue-300" href={`mailto:${CONTACT_EMAIL}`}>
+          <a className="text-emerald-400 hover:text-emerald-300" href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>
           .
         </p>
         <p>
-          Support: <Link href="/projects/mortlymd/support" className="text-blue-400 hover:text-blue-300">markduenas.com/projects/mortlymd/support</Link>
+          Support: <Link href="/projects/mortlymd/support" className="text-emerald-400 hover:text-emerald-300">markduenas.com/projects/mortlymd/support</Link>
         </p>
         <p className="text-sm text-slate-500">
           This page: https://www.markduenas.com/projects/mortlymd/privacy-policy/
