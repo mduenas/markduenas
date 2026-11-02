@@ -100,6 +100,12 @@ export default function ProjectsListSection() {
                         <span className="text-xs font-mono text-gray-300 tracking-wider">iOS</span>
                       </div>
                     )}
+                    {project.platforms.includes('Android') && (
+                      <div className="retro-card p-3 bg-black flex items-center space-x-2">
+                        <Smartphone className="w-4 h-4 tech-accent" />
+                        <span className="text-xs font-mono text-gray-300 tracking-wider">Android</span>
+                      </div>
+                    )}
                     {project.platforms.includes('iPadOS') && (
                       <div className="retro-card p-3 bg-black flex items-center space-x-2">
                         <Tablet className="w-4 h-4 tech-accent" />
@@ -121,7 +127,7 @@ export default function ProjectsListSection() {
                         <div className="flex items-center gap-4 mb-3">
                           <span className={`retro-card px-3 py-1 text-sm font-mono tracking-wider ${
                             project.status === 'PRODUCTION' ? 'tech-text bg-black' :
-                            project.status === 'BETA' ? 'amber-text bg-black' : 'text-gray-400 bg-black'
+                            project.status === 'BETA' || project.status === 'COMING SOON' ? 'amber-text bg-black' : 'text-gray-400 bg-black'
                           }`}>
                             {project.status}
                           </span>
@@ -196,15 +202,21 @@ export default function ProjectsListSection() {
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       <span>VIEW DETAILS</span>
                     </Link>
-                    <div className="flex gap-4 flex-1">
-                      <a
-                        href={project.appStoreUrl}
-                        className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        <span>APP STORE</span>
-                      </a>
-                      {project.playStoreUrl && (
+                    <div className="flex flex-wrap gap-4 flex-1">
+                      {project.appStoreUrl ? (
+                        <a
+                          href={project.appStoreUrl}
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span>APP STORE</span>
+                        </a>
+                      ) : (
+                        <span className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1 opacity-80">
+                          <span>APP STORE · SOON</span>
+                        </span>
+                      )}
+                      {project.playStoreUrl ? (
                         <a
                           href={project.playStoreUrl}
                           className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
@@ -212,7 +224,11 @@ export default function ProjectsListSection() {
                           <ExternalLink className="w-4 h-4" />
                           <span>PLAY STORE</span>
                         </a>
-                      )}
+                      ) : project.platforms.includes('Android') ? (
+                        <span className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1 opacity-80">
+                          <span>PLAY STORE · SOON</span>
+                        </span>
+                      ) : null}
                       {project.websiteUrl && (
                         <a
                           href={project.websiteUrl}
@@ -224,13 +240,31 @@ export default function ProjectsListSection() {
                           <span>WEBSITE</span>
                         </a>
                       )}
-                      <a
-                        href={project.githubUrl}
-                        className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
-                      >
-                        <Github className="w-4 h-4" />
-                        <span>CODE</span>
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <Github className="w-4 h-4" />
+                          <span>CODE</span>
+                        </a>
+                      )}
+                      {project.privacyPath && (
+                        <Link
+                          href={project.privacyPath}
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <span>PRIVACY</span>
+                        </Link>
+                      )}
+                      {project.supportPath && (
+                        <Link
+                          href={project.supportPath}
+                          className="retro-btn-secondary text-sm flex items-center justify-center gap-2 flex-1"
+                        >
+                          <span>SUPPORT</span>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

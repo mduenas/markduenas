@@ -89,7 +89,7 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
             <span className={`px-3 py-1 text-sm font-medium rounded-full ${
               project.status === 'PRODUCTION'
                 ? 'bg-green-500/10 text-green-400'
-                : project.status === 'BETA'
+                : project.status === 'BETA' || project.status === 'COMING SOON'
                 ? 'bg-amber-500/10 text-amber-400'
                 : 'bg-slate-700 text-slate-400'
             }`}>
@@ -267,14 +267,20 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href={project.appStoreUrl}
-                className="btn-primary flex-1 flex items-center justify-center gap-2"
-              >
-                <ExternalLink className="w-4 h-4" />
-                App Store
-              </a>
-              {project.playStoreUrl && (
+              {project.appStoreUrl ? (
+                <a
+                  href={project.appStoreUrl}
+                  className="btn-primary flex-1 flex items-center justify-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  App Store
+                </a>
+              ) : (
+                <span className="btn-secondary flex-1 flex items-center justify-center gap-2 opacity-80 pointer-events-none">
+                  App Store — Coming soon
+                </span>
+              )}
+              {project.playStoreUrl ? (
                 <a
                   href={project.playStoreUrl}
                   className="btn-primary flex-1 flex items-center justify-center gap-2"
@@ -282,15 +288,42 @@ export default function ProjectDetailPage({ project, projectId }: ProjectDetailP
                   <ExternalLink className="w-4 h-4" />
                   Play Store
                 </a>
+              ) : project.platforms.includes('Android') ? (
+                <span className="btn-secondary flex-1 flex items-center justify-center gap-2 opacity-80 pointer-events-none">
+                  Play Store — Coming soon
+                </span>
+              ) : null}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                >
+                  <Github className="w-4 h-4" />
+                  Source Code
+                </a>
               )}
-              <a
-                href={project.githubUrl}
-                className="btn-secondary flex-1 flex items-center justify-center gap-2"
-              >
-                <Github className="w-4 h-4" />
-                Source Code
-              </a>
             </div>
+
+            {(project.privacyPath || project.supportPath) && (
+              <div className="flex flex-col sm:flex-row gap-3">
+                {project.privacyPath && (
+                  <Link
+                    href={project.privacyPath}
+                    className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                  >
+                    Privacy Policy
+                  </Link>
+                )}
+                {project.supportPath && (
+                  <Link
+                    href={project.supportPath}
+                    className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                  >
+                    Support
+                  </Link>
+                )}
+              </div>
+            )}
 
             {/* Website / support link */}
             {project.websiteUrl && (
