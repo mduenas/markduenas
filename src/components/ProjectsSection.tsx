@@ -44,9 +44,10 @@ export default function ProjectsSection() {
               transition={{ duration: 0.4, delay: 0.1 * index }}
               className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
             >
+              <div className="card p-4 h-full hover:border-blue-500/30 transition-all duration-200">
               <Link
                 href={`/projects/${project.id}`}
-                className="group block card p-4 hover:border-blue-500/30 transition-all duration-200"
+                className="group block"
               >
                 {/* Icon */}
                 <div className="flex justify-center mb-3">
@@ -75,7 +76,7 @@ export default function ProjectsSection() {
                   <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                     project.status === 'PRODUCTION'
                       ? 'bg-green-500/10 text-green-400'
-                      : project.status === 'BETA'
+                      : project.status === 'BETA' || project.status === 'COMING SOON'
                       ? 'bg-amber-500/10 text-amber-400'
                       : 'bg-slate-700 text-slate-400'
                   }`}>
@@ -83,6 +84,21 @@ export default function ProjectsSection() {
                   </span>
                 </div>
               </Link>
+              {(project.privacyPath || project.supportPath) && (
+                <div className="flex justify-center gap-3 mt-3">
+                  {project.privacyPath && (
+                    <Link href={project.privacyPath} className="text-xs text-slate-400 hover:text-blue-400 transition-colors">
+                      Privacy
+                    </Link>
+                  )}
+                  {project.supportPath && (
+                    <Link href={project.supportPath} className="text-xs text-slate-400 hover:text-blue-400 transition-colors">
+                      Support
+                    </Link>
+                  )}
+                </div>
+              )}
+              </div>
             </motion.div>
           ))}
         </motion.div>

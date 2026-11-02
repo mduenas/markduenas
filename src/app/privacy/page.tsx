@@ -15,7 +15,8 @@ export default function PrivacyPage() {
       icon: Eye,
       title: "INFORMATION_COLLECTION.DAT",
       content: [
-        "This privacy policy covers both this portfolio website and all mobile applications published by Mark Duenas.",
+        "This privacy policy covers this portfolio website and Mark Duenas mobile applications that use accounts, cloud storage, analytics, or advertising.",
+        "Mortly MD is different and has its own policy. Mortly MD collects no personal data and does not use Firebase, advertising, or analytics. Read it at /projects/mortlymd/privacy-policy.",
         "Portfolio website collects: contact form submissions (name, email, subject, message) and analytics data (page views, session duration, general geographic location).",
         "Mobile applications may collect: account credentials (email/password), user-generated content (visit schedules, messages, recipes, session notes, etc.), device identifiers, crash reports, and usage analytics.",
         "No personal information is collected without your explicit consent through form submission or app account creation.",
@@ -163,6 +164,23 @@ export default function PrivacyPage() {
                   &gt;&gt;&gt; DATA PROTECTION PRACTICES FOR PORTFOLIO WEBSITE AND MOBILE APPLICATIONS
                 </p>
               </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="mb-12 rounded-xl border border-blue-500/40 bg-slate-800 p-6 text-left"
+            >
+              <p className="text-gray-200 font-mono leading-relaxed mb-4">
+                Mortly MD users: that app collects no personal data. It does not use Firebase, ads, or analytics, so the sections below do not describe it.
+              </p>
+              <Link
+                href="/projects/mortlymd/privacy-policy"
+                className="inline-flex text-blue-400 hover:text-blue-300 font-mono tracking-wider"
+              >
+                MORTLY MD PRIVACY POLICY
+              </Link>
             </motion.div>
 
             {/* Privacy Sections */}

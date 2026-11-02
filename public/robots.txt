@@ -27,7 +27,9 @@ Crawl-delay: 2
 #   /               — Main portfolio, bio, skills, featured projects
 #   /projects       — Full list of mobile apps and projects
 #   /projects/{id}  — Individual project detail (screenshots, description, links)
-#   /privacy        — Privacy policy
+#   /privacy        — Privacy policy for the website and apps that use cloud services
+#   /projects/mortlymd/privacy-policy — Mortly MD privacy policy (collects no personal data)
+#   /projects/mortlymd/support — Mortly MD support
 #   /terms          — Terms of service
 #
 # Owner: Mark Duenas <markduenas@gmail.com>

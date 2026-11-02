@@ -8,8 +8,12 @@ export interface Project {
   platforms: string[];
   appStoreUrl: string;
   playStoreUrl?: string;
-  githubUrl: string;
+  githubUrl?: string;
   websiteUrl?: string;
+  /** In-site path, for example /projects/mortlymd/privacy-policy */
+  privacyPath?: string;
+  /** In-site path, for example /projects/mortlymd/support */
+  supportPath?: string;
   status: string;
   version: string;
   features: string[];
@@ -450,6 +454,37 @@ export const projects: Project[] = [
       '/images/projects/homesteader/dashboard_light.png',
       '/images/projects/homesteader/animal_list_light.png',
       '/images/projects/homesteader/calendar_light.png'
+    ],
+    tabletImages: []
+  },
+  {
+    id: 'mortlymd',
+    title: 'MORTLY_MD.APP',
+    category: 'Finance & Real Estate',
+    description: 'A free mortgage savings calculator. Estimate the monthly payment, see what it takes to pay a loan off early, and find the break-even point on mortgage points.',
+    longDescription: 'Mortly MD is a free mortgage calculator for Android and iOS. Three tabs cover the usual questions: Payment (monthly principal and interest, plus tax and insurance), Payoff (for example, paying a 30-year loan off in 15 years), and Points (when mortgage points break even). Version 1 collects no data: there is no account, no analytics, no advertising, and no network access. Numbers you enter stay on the device and are excluded from device backups. The first store release is still pending.',
+    technologies: ['ON DEVICE', 'OFFLINE', 'LOCAL STORAGE'],
+    platforms: ['Android', 'iOS'],
+    // Public listing URLs are not live yet. Paste them here when the first release ships.
+    appStoreUrl: '',
+    playStoreUrl: '',
+    privacyPath: '/projects/mortlymd/privacy-policy',
+    supportPath: '/projects/mortlymd/support',
+    status: 'COMING SOON',
+    version: 'v1.0',
+    features: [
+      'MONTHLY PRINCIPAL, INTEREST, TAX, AND INSURANCE',
+      'PAYOFF SCHEDULE, SUCH AS A 30-YEAR LOAN IN 15 YEARS',
+      'MORTGAGE POINTS BREAK-EVEN',
+      'NO ACCOUNT, ADS, ANALYTICS, OR NETWORK ACCESS',
+      'INPUTS STAY ON THE DEVICE AND ARE EXCLUDED FROM BACKUPS',
+      'FREE, WITH NO IN-APP PURCHASES IN VERSION 1'
+    ],
+    images: [
+      '/images/projects/mortlymd/icon.png'
+    ],
+    mobileImages: [
+      '/images/projects/mortlymd/icon.png'
     ],
     tabletImages: []
   }
