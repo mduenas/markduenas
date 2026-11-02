@@ -40,7 +40,7 @@ export function MortlyDoc({
               height={64}
               className="rounded-2xl"
             />
-            <p className="text-sm font-medium text-blue-400">{kicker}</p>
+            <p className="text-sm font-medium text-emerald-400">{kicker}</p>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
           <p className="text-lg text-slate-400 leading-relaxed">{lede}</p>

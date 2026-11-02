@@ -57,14 +57,14 @@ export default function MortlySupportPage() {
       <MortlySection title="Contact">
         <p>
           Email Mark Duenas at{' '}
-          <a className="text-blue-400 hover:text-blue-300" href={`mailto:${CONTACT_EMAIL}`}>
+          <a className="text-emerald-400 hover:text-emerald-300" href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>
           . Include whether you are on Android or iOS, and what you expected the calculator to show.
         </p>
         <p>
           Privacy policy:{' '}
-          <Link href="/projects/mortlymd/privacy-policy" className="text-blue-400 hover:text-blue-300">
+          <Link href="/projects/mortlymd/privacy-policy" className="text-emerald-400 hover:text-emerald-300">
             markduenas.com/projects/mortlymd/privacy-policy
           </Link>
         </p>
