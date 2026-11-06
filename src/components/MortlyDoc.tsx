@@ -8,22 +8,26 @@ export function MortlyDoc({
   title,
   lede,
   children,
+  appSlug = 'mortlymd',
+  appName = 'Mortly MD',
 }: {
   kicker: string
   title: string
   lede: string
   children: ReactNode
+  appSlug?: string
+  appName?: string
 }) {
   return (
     <div className="min-h-screen py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
           <Link
-            href="/projects/mortlymd"
+            href={`/projects/${appSlug}`}
             className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Mortly MD
+            {appName}
           </Link>
           <Link href="/" className="text-sm font-semibold">
             <span className="text-blue-500">Mark</span>
@@ -34,8 +38,8 @@ export function MortlyDoc({
         <header className="mb-10">
           <div className="flex items-center gap-4 mb-5">
             <Image
-              src="/images/projects/mortlymd/icon.png"
-              alt="Mortly MD icon"
+              src={`/images/projects/${appSlug}/icon.png`}
+              alt={`${appName} icon`}
               width={64}
               height={64}
               className="rounded-2xl"

@@ -487,6 +487,40 @@ export const projects: Project[] = [
       '/images/projects/mortlymd/icon.png'
     ],
     tabletImages: []
+  },
+  {
+    id: 'sixtytwoseventy',
+    title: 'SIXTY_TWO_TO_SEVENTY.APP',
+    category: 'Finance & Retirement',
+    description: 'Social Security claiming-age calculator. See the benefit at each age from 62 to 70, the cumulative payout, and the breakeven ages.',
+    longDescription: 'Sixty-Two to Seventy is a free Social Security claiming-age calculator for Android and iOS. Enter your birth year and your benefit at full retirement age. The app shows your monthly benefit at every claiming age from 62 to 70, the breakeven ages for waiting, and a chart of the total received by each age. COLA and discount rate are adjustable. Everything is calculated on the device: no account, no ads, no analytics, and no network access. Estimates are for education only and are not financial, tax, or legal advice. The first store release is still pending.',
+    technologies: ['KOTLIN MULTIPLATFORM', 'COMPOSE', 'ON DEVICE', 'OFFLINE'],
+    platforms: ['Android', 'iOS'],
+    // Public listing URLs are not live yet. Paste them here when the first release ships.
+    appStoreUrl: '',
+    playStoreUrl: '',
+    privacyPath: '/projects/sixtytwoseventy/privacy-policy',
+    supportPath: '/projects/sixtytwoseventy/support',
+    status: 'COMING SOON',
+    version: 'v1.0',
+    features: [
+      'MONTHLY BENEFIT AT EVERY CLAIMING AGE FROM 62 TO 70',
+      'BREAKEVEN AGES FOR CLAIMING EARLY, AT FULL AGE, OR DELAYED',
+      'CHART OF THE TOTAL RECEIVED BY EACH AGE',
+      'ADJUSTABLE COLA AND DISCOUNT RATE',
+      'NO ACCOUNT, ADS, ANALYTICS, OR NETWORK ACCESS',
+      'FREE, WITH NO IN-APP PURCHASES'
+    ],
+    images: [
+      '/images/projects/sixtytwoseventy/icon.png',
+      '/images/projects/sixtytwoseventy/feature.png'
+    ],
+    mobileImages: [
+      '/images/projects/sixtytwoseventy/01-calculator.png',
+      '/images/projects/sixtytwoseventy/02-chart-and-table.png',
+      '/images/projects/sixtytwoseventy/03-info.png'
+    ],
+    tabletImages: []
   }
 ];
 

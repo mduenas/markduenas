@@ -94,6 +94,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://markduenas.com/projects/sixtytwoseventy</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- App-specific pages -->
   <url>
@@ -117,6 +123,18 @@
   <url>
     <loc>https://markduenas.com/projects/mortlymd/support</loc>
     <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://markduenas.com/projects/sixtytwoseventy/privacy-policy</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://markduenas.com/projects/sixtytwoseventy/support</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
